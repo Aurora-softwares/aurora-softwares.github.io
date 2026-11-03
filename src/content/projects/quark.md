@@ -3,7 +3,7 @@ title: 'Quark IDE'
 summary: 'A welcoming place to write your next idea.'
 description: 'Quark IDE is a desktop development environment focused on Hydrogen projects, bringing editing, project tools and building together in one workspace.'
 cover: '../../assets/images/projects/quark-art.svg'
-coverAlt: 'Pastel peach and lavender abstract artwork for Quark IDE'
+coverAlt: 'Pastel lavender and blue abstract artwork for Quark IDE'
 tech:
   - 'IDE'
   - 'Hydrogen'
