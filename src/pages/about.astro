@@ -8,22 +8,19 @@ import { withBase } from '@/lib/url';
 
 const principles = [
   {
-    number: '01',
-    title: 'Stay curious',
+    title: 'Explore with intent',
     description:
-      'Ask the questions, follow the ideas and enjoy learning along the way.',
+      'Approach complex challenges with thoughtful experimentation and practical goals.',
   },
   {
-    number: '02',
-    title: 'Build with care',
+    title: 'Design for people',
     description:
-      'Pay attention to the little details that make software easier to understand and nicer to use.',
+      'Make powerful technology clear, dependable and accessible to the people using it.',
   },
   {
-    number: '03',
-    title: 'Share the journey',
+    title: 'Develop in the open',
     description:
-      'Let people explore the code, the progress and the thinking behind our projects.',
+      'Make our work discoverable through source code, project updates and shared learning.',
   },
 ];
 ---
@@ -37,12 +34,12 @@ const principles = [
     <section class="about-hero">
       <Container size="xl">
         <div class="about-hero__panel">
-          <p class="eyebrow">Oh, hello! ✳</p>
-          <h1>Made with curiosity.<br /><span>Built with purpose.</span></h1>
+          <p class="eyebrow">About Aurora Softwares</p>
+          <h1>Independent thinking.<br /><span>Purposeful engineering.</span></h1>
           <p class="intro">
-            Aurora Softwares is a home for ambitious software ideas. We explore
-            how technology works, imagine how it could feel, and build the tools
-            we wish existed.
+            Aurora Softwares develops independent software projects that connect
+            through a shared focus on engineering, usability and considered
+            design.
           </p>
           <div class="hero-shapes" aria-hidden="true">
             <span></span><span></span><span>✳</span>
@@ -54,26 +51,23 @@ const principles = [
     <section class="story">
       <Container size="xl">
         <div class="story__heading">
-          <p class="eyebrow">A little about Aurora</p><h2>
-            Wondering <em>what if?</em><br />Then getting to work.
+          <p class="eyebrow">Our story</p><h2>
+            From ambitious ideas to <em>practical software.</em>
           </h2>
         </div>
         <div class="story__body">
           <p>
-            Some projects begin with a tiny experiment. Others begin with a much
-            bigger question—like what it takes to build a programming language,
-            an IDE or even an operating system.
+            Our work spans programming languages, native development tools and
+            operating systems. Each project begins with a technical challenge
+            and evolves through consistent, practical development.
           </p>
           <p>
-            At Aurora Softwares, we make space for both. Hydrogen, Quark IDE and
-            Australis OS are separate projects that connect through a shared
-            interest in approachable software and meaningful technical
-            challenges.
+            Hydrogen, Quark IDE and Australis OS are developed as distinct products,
+            with shared goals and technologies that inform one another.
           </p>
           <p>
-            They're works in progress, and that's part of the story. We want
-            visitors to be able to see what each project is, where it is going
-            and how to follow along.
+            These are ongoing efforts. We share the work behind them and aim to
+            make it easy to understand their purpose and development.
           </p>
         </div>
       </Container>
@@ -82,17 +76,14 @@ const principles = [
     <section class="values" aria-labelledby="values-title">
       <Container size="xl">
         <p class="eyebrow">Our approach</p><h2 id="values-title">
-          The things that matter to us.
+          What guides our work.
         </h2>
         <div class="values__grid">
           {
             principles.map((item) => (
               <article>
-                <>
-                  <span>{item.number}</span>
-                  <h3>{item.title}</h3>
-                  <p>{item.description}</p>
-                </>
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
               </article>
             ))
           }
@@ -103,25 +94,22 @@ const principles = [
     <section class="about-cta">
       <Container size="xl">
         <div class="about-cta__panel">
-          <p class="eyebrow">There's more to discover</p><h2>
-            Come meet the projects.
+          <p class="eyebrow">Our work</p><h2>
+            Explore our projects.
           </h2>
           <p>
-            Explore the ideas in progress, read the documentation or take a look
-            at the source code.
+            Learn more about what we build and follow development in our
+            public repositories.
           </p>
           <div class="about-cta__actions">
             <Button href={withBase('/work/')} variant="solid" size="lg"
-              >Meet the projects ↗</Button
-            >
-            <Button href={withBase('/docs/')} variant="outline" size="lg"
-              >Browse documentation</Button
+              >View projects →</Button
             >
             <Button
               href="https://github.com/Aurora-softwares"
               external
               variant="outline"
-              size="lg">Find us on GitHub ↗</Button
+              size="lg">View on GitHub →</Button
             >
           </div>
         </div>
@@ -174,7 +162,7 @@ const principles = [
     max-width: 13ch;
     margin: 0 0 2rem;
     color: #373049;
-    font-size: clamp(3.2rem, 8vw, 7rem);
+    font-size: clamp(3.15rem, 6.5vw, 6.2rem);
     letter-spacing: -0.07em;
     line-height: 1;
   }
@@ -281,21 +269,17 @@ const principles = [
     background: var(--color-surface);
   }
   .values__grid article:nth-child(1) {
-    border-top: 5px solid #bba1ea;
+    border-top: 3px solid #bba1ea;
   }
   .values__grid article:nth-child(2) {
-    border-top: 5px solid #b2d9ed;
+    border-top: 3px solid #b2d9ed;
   }
   .values__grid article:nth-child(3) {
-    border-top: 5px solid #efbccb;
-  }
-  .values__grid article span {
-    color: var(--color-accent-text);
-    font: 700 0.8rem var(--font-mono);
+    border-top: 3px solid #efbccb;
   }
   .values__grid article h3 {
-    font-size: 1.8rem;
-    margin: 1rem 0;
+    font-size: 1.6rem;
+    margin: 0 0 1rem;
   }
   .values__grid article p {
     color: var(--color-text-muted);
