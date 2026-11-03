@@ -2,557 +2,107 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import Header from '@/components/common/Header.astro';
 import Footer from '@/components/common/Footer.astro';
-import GlassPanel from '@/components/common/GlassPanel.astro';
-import Button from '@/components/ui/Button.astro';
 import Container from '@/components/ui/Container.astro';
-import GlassCard from '@/components/ui/GlassCard.astro';
-import Section from '@/components/ui/Section.astro';
-import siteConfig from '@/site.config';
+import Button from '@/components/ui/Button.astro';
 import { withBase } from '@/lib/url';
 
-const formats = [
-  {
-    number: '01',
-    label: 'Publish',
-    title: 'A journal with editorial rhythm.',
-    description:
-      'Long-form writing, tags, reading metadata, and thoughtful article layouts give ideas enough room to develop.',
-    href: '/blog/',
-  },
-  {
-    number: '02',
-    label: 'Present',
-    title: 'A portfolio that shows the thinking.',
-    description:
-      'Project collections turn outcomes, process, roles, and technical decisions into clear, navigable case studies.',
-    href: '/work/',
-  },
-  {
-    number: '03',
-    label: 'Launch',
-    title: 'An EC landing page without the lock-in.',
-    description:
-      'Reusable sections cover benefits, editions, galleries, testimonials, FAQ, and external commerce calls to action.',
-    href: '/landing/',
-  },
-];
-
-const stack = [
-  {
-    name: 'Astro 7',
-    category: 'Framework',
-    detail: 'Static-first rendering with a deliberately small browser runtime.',
-  },
-  {
-    name: 'Content Layer',
-    category: 'Content',
-    detail:
-      'Typed, validated collections for articles, projects, and campaign data.',
-  },
-  {
-    name: 'Sätteri',
-    category: 'Markdown',
-    detail:
-      'Astro’s modern Markdown pipeline for dependable authoring and output.',
-  },
-  {
-    name: 'Glass system',
-    category: 'Interface',
-    detail:
-      'Focused translucent surfaces, restrained depth, and solid fallbacks.',
-  },
-  {
-    name: 'Accessible by design',
-    category: 'Foundation',
-    detail:
-      'Semantic structure, visible focus, native controls, and preference-aware motion.',
-  },
+const principles = [
+  { number: '01', title: 'Stay curious', description: 'Ask the questions, follow the ideas and enjoy learning along the way.' },
+  { number: '02', title: 'Build with care', description: 'Pay attention to the little details that make software easier to understand and nicer to use.' },
+  { number: '03', title: 'Share the journey', description: 'Let people explore the code, the progress and the thinking behind our projects.' },
 ];
 ---
 
-<BaseLayout
-  title="About"
-  description={`${siteConfig.name} is a modular Astro 7 theme for publishing stories, projects, and focused landing pages.`}
->
+<BaseLayout title="About Aurora Softwares" description="Get to know Aurora Softwares, our approach to building software and the projects we are exploring.">
   <Header />
-
   <main id="main" tabindex="-1">
     <section class="about-hero">
       <Container size="xl">
-        <GlassPanel
-          variant="solid"
-          padding="xl"
-          radius="xl"
-          className="about-hero__panel"
-        >
-          <div class="about-hero__meta">
-            <span>About the system</span>
-            <span>Open source · Astro 7</span>
-          </div>
-
-          <div class="about-hero__body">
-            <div class="about-hero__title">
-              <p>Designed by {siteConfig.author}</p>
-              <h1>A quiet framework for expressive work.</h1>
-            </div>
-            <div class="about-hero__statement">
-              <p>
-                {siteConfig.name} is a multi-purpose theme built around one belief:
-                strong structure should make creative choices easier, not narrower.
-              </p>
-              <p>
-                It combines editorial hierarchy, typed content, accessible
-                interaction, and carefully limited glass effects into a
-                foundation meant to be changed.
-              </p>
-            </div>
-          </div>
-
-          <div class="about-hero__footer">
-            <span aria-hidden="true">AH / 07</span>
-            <div class="about-hero__actions">
-              {
-                siteConfig.social.github && (
-                  <Button
-                    href={siteConfig.social.github}
-                    external
-                    variant="solid"
-                    size="lg"
-                  >
-                    View on GitHub <span aria-hidden="true">↗</span>
-                  </Button>
-                )
-              }
-              <Button href={withBase('/landing/')} variant="outline" size="lg"
-                >See the live demo</Button
-              >
-            </div>
-          </div>
-        </GlassPanel>
-      </Container>
-    </section>
-
-    <Section
-      eyebrow="One system, three formats"
-      title="Built around what you need to say."
-      subtitle="Start with a complete publishing model, then remove, reorder, and restyle until it belongs to the work."
-      align="left"
-      container="xl"
-    >
-      <div class="format-list">
-        {
-          formats.map((format) => (
-            <GlassCard
-              href={withBase(format.href)}
-              padding="lg"
-              radius="xl"
-              class="format-card"
-            >
-              <div class="format-card__meta">
-                <span>{format.number}</span>
-                <span>{format.label}</span>
-              </div>
-              <h2>{format.title}</h2>
-              <p>{format.description}</p>
-              <span class="format-card__link">
-                Explore format <i aria-hidden="true">↗</i>
-              </span>
-            </GlassCard>
-          ))
-        }
-      </div>
-    </Section>
-
-    <section class="principle">
-      <Container size="xl">
-        <p class="principle__index">The principle / 04</p>
-        <blockquote>
-          Atmosphere should support the content,
-          <span>never compete with it.</span>
-        </blockquote>
-        <div class="principle__note">
-          <span class="principle__mark" aria-hidden="true">✦</span>
-          <p>
-            Glass appears only where it clarifies grouping or depth. Everywhere
-            else, type, spacing, and borders do the quieter work.
-          </p>
+        <div class="about-hero__panel">
+          <p class="eyebrow">Oh, hello! ✳</p>
+          <h1>Made with curiosity.<br /><span>Built with purpose.</span></h1>
+          <p class="intro">Aurora Softwares is a home for ambitious software ideas. We explore how technology works, imagine how it could feel, and build the tools we wish existed.</p>
+          <div class="hero-shapes" aria-hidden="true"><span></span><span></span><span>✳</span></div>
         </div>
       </Container>
     </section>
 
-    <Section
-      id="stack"
-      eyebrow="Under the surface"
-      title="A modern, legible stack."
-      subtitle="The implementation favors platform features and durable conventions over client-side machinery."
-      align="left"
-      container="xl"
-    >
-      <ol class="stack-list">
-        {
-          stack.map((item, index) => (
-            <li>
-              <span class="stack-list__number">
-                {String(index + 1).padStart(2, '0')}
-              </span>
-              <span class="stack-list__category">{item.category}</span>
-              <strong>{item.name}</strong>
-              <p>{item.detail}</p>
-            </li>
-          ))
-        }
-      </ol>
-    </Section>
+    <section class="story">
+      <Container size="xl">
+        <div class="story__heading"><p class="eyebrow">A little about Aurora</p><h2>Wondering <em>what if?</em><br />Then getting to work.</h2></div>
+        <div class="story__body">
+          <p>Some projects begin with a tiny experiment. Others begin with a much bigger question—like what it takes to build a programming language, an IDE or even an operating system.</p>
+          <p>At Aurora Softwares, we make space for both. Hydrogen, Quark IDE and Australis OS are separate projects that connect through a shared interest in approachable software and meaningful technical challenges.</p>
+          <p>They're works in progress, and that's part of the story. We want visitors to be able to see what each project is, where it is going and how to follow along.</p>
+        </div>
+      </Container>
+    </section>
+
+    <section class="values" aria-labelledby="values-title">
+      <Container size="xl">
+        <p class="eyebrow">Our approach</p><h2 id="values-title">The things that matter to us.</h2>
+        <div class="values__grid">
+          {principles.map((item) => (
+            <article><span>{item.number}</span><h3>{item.title}</h3><p>{item.description}</p></article>
+          ))}
+        </div>
+      </Container>
+    </section>
 
     <section class="about-cta">
       <Container size="xl">
-        <div class="about-cta__copy">
-          <p>Fork the foundation</p>
-          <h2>Make the haze your own.</h2>
-        </div>
-        <div class="about-cta__aside">
-          <p>
-            Use the theme as a starting point for your next publication,
-            portfolio, or campaign—then shape the system around your own voice.
-          </p>
-          <div>
-            {
-              siteConfig.social.github && (
-                <Button
-                  href={siteConfig.social.github}
-                  external
-                  variant="solid"
-                  size="lg"
-                >
-                  Get the source <span aria-hidden="true">↗</span>
-                </Button>
-              )
-            }
-            {
-              siteConfig.social.twitter && (
-                <Button
-                  href={siteConfig.social.twitter}
-                  external
-                  variant="outline"
-                  size="lg"
-                >
-                  Follow updates
-                </Button>
-              )
-            }
+        <div class="about-cta__panel">
+          <p class="eyebrow">There's more to discover</p><h2>Come meet the projects.</h2>
+          <p>Explore the ideas in progress, read the documentation or take a look at the source code.</p>
+          <div class="about-cta__actions">
+            <Button href={withBase('/work/')} variant="solid" size="lg">Meet the projects ↗</Button>
+            <Button href={withBase('/docs/')} variant="outline" size="lg">Browse documentation</Button>
+            <Button href="https://github.com/Aurora-softwares" external variant="outline" size="lg">Find us on GitHub ↗</Button>
           </div>
         </div>
       </Container>
     </section>
   </main>
-
   <Footer />
 </BaseLayout>
 
 <style>
-  main {
-    overflow: clip;
-  }
-
-  .about-hero {
-    padding-block: clamp(3rem, 8vw, 7rem);
-  }
-
-  .about-hero__panel {
-    min-height: min(47rem, calc(100vh - 8rem)); /* fallback */
-    min-height: min(47rem, calc(100dvh - 8rem));
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
-  .about-hero__meta,
-  .about-hero__footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: var(--space-lg);
-    color: var(--color-text-muted);
-    text-transform: uppercase;
-    letter-spacing: 0.13em;
-    font-family: var(--font-mono);
-    font-size: var(--text-xs);
-  }
-
-  .about-hero__meta {
-    padding-bottom: var(--space-lg);
-    border-bottom: 1px solid var(--glass-border);
-  }
-
-  .about-hero__body {
-    display: grid;
-    grid-template-columns: minmax(20rem, 1.4fr) minmax(17rem, 0.6fr);
-    align-items: end;
-    gap: clamp(3rem, 8vw, 8rem);
-    padding-block: clamp(4rem, 10vw, 8rem);
-  }
-
-  .about-hero__title > p,
-  .about-cta__copy > p {
-    color: var(--color-accent);
-    text-transform: uppercase;
-    letter-spacing: 0.13em;
-    font-size: var(--text-xs);
-    font-weight: 700;
-  }
-
-  h1 {
-    max-width: 11ch;
-    margin: var(--space-lg) 0 0;
-    font-size: clamp(3.5rem, 8.5vw, 8rem);
-    line-height: 0.88;
-    letter-spacing: -0.07em;
-  }
-
-  .about-hero__statement {
-    padding-left: var(--space-xl);
-    border-left: 1px solid var(--glass-border);
-    color: var(--color-text-muted);
-    font-size: var(--text-lg);
-  }
-
-  .about-hero__statement p:last-child {
-    margin-bottom: 0;
-  }
-
-  .about-hero__footer {
-    align-items: flex-end;
-    padding-top: var(--space-lg);
-    border-top: 1px solid var(--glass-border);
-  }
-
-  .about-hero__actions {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    gap: var(--space-sm);
-  }
-
-  .format-list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-lg);
-  }
-
-  .format-card {
-    min-height: 28rem;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .format-card:nth-child(2) {
-    transform: translateY(2.5rem);
-  }
-
-  .format-card__meta {
-    display: flex;
-    justify-content: space-between;
-    color: var(--color-text-muted);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    font-family: var(--font-mono);
-    font-size: var(--text-xs);
-  }
-
-  .format-card h2 {
-    max-width: 12ch;
-    margin: auto 0 var(--space-lg);
-    font-size: var(--text-3xl);
-    line-height: 1.02;
-    letter-spacing: -0.045em;
-  }
-
-  .format-card p {
-    color: var(--color-text-muted);
-  }
-
-  .format-card__link {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: var(--space-lg);
-    padding-top: var(--space-lg);
-    border-top: 1px solid var(--glass-border);
-    color: var(--color-text);
-    font-weight: 700;
-  }
-
-  .format-card__link i {
-    color: var(--color-accent);
-    font-style: normal;
-  }
-
-  .principle {
-    padding-block: clamp(7rem, 16vw, 14rem);
-  }
-
-  .principle__index {
-    color: var(--color-accent);
-    text-transform: uppercase;
-    letter-spacing: 0.13em;
-    font-family: var(--font-mono);
-    font-size: var(--text-xs);
-  }
-
-  blockquote {
-    max-width: 15ch;
-    margin: clamp(3rem, 7vw, 6rem) 0;
-    font-size: clamp(3.2rem, 8vw, 7.5rem);
-    font-weight: 750;
-    line-height: 0.88;
-    letter-spacing: -0.07em;
-  }
-
-  blockquote span {
-    display: block;
-    color: var(--color-text-muted);
-    font-weight: 500;
-  }
-
-  .principle__note {
-    display: grid;
-    grid-template-columns: auto minmax(15rem, 31rem);
-    justify-content: end;
-    align-items: start;
-    gap: var(--space-lg);
-  }
-
-  .principle__note p {
-    margin: 0;
-    color: var(--color-text-muted);
-    font-size: var(--text-lg);
-  }
-
-  .principle__mark {
-    color: var(--color-accent);
-    font-size: var(--text-2xl);
-  }
-
-  .stack-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    border-top: 1px solid var(--glass-border);
-  }
-
-  .stack-list li {
-    display: grid;
-    grid-template-columns: 3rem 8rem minmax(12rem, 0.65fr) minmax(18rem, 1fr);
-    align-items: baseline;
-    gap: var(--space-lg);
-    margin: 0;
-    padding-block: var(--space-xl);
-    border-bottom: 1px solid var(--glass-border);
-  }
-
-  .stack-list__number,
-  .stack-list__category {
-    color: var(--color-text-muted);
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    font-family: var(--font-mono);
-    font-size: var(--text-xs);
-  }
-
-  .stack-list strong {
-    font-size: var(--text-xl);
-  }
-
-  .stack-list p {
-    margin: 0;
-    color: var(--color-text-muted);
-  }
-
-  .about-cta {
-    padding-block: clamp(6rem, 14vw, 12rem);
-  }
-
-  .about-cta :global(.container) {
-    display: grid;
-    grid-template-columns: minmax(20rem, 1.2fr) minmax(18rem, 0.8fr);
-    align-items: end;
-    gap: clamp(3rem, 10vw, 10rem);
-    padding-top: clamp(3rem, 7vw, 6rem);
-    border-top: 1px solid var(--glass-border);
-  }
-
-  .about-cta h2 {
-    max-width: 10ch;
-    margin: var(--space-lg) 0 0;
-    font-size: clamp(3.5rem, 8vw, 7rem);
-    line-height: 0.88;
-    letter-spacing: -0.07em;
-  }
-
-  .about-cta__aside > p {
-    color: var(--color-text-muted);
-    font-size: var(--text-lg);
-  }
-
-  .about-cta__aside > div {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-sm);
-    margin-top: var(--space-xl);
-  }
-
-  @media (max-width: 900px) {
-    .about-hero__body,
-    .format-list,
-    .about-cta :global(.container) {
-      grid-template-columns: 1fr;
-    }
-
-    .format-card,
-    .format-card:nth-child(2) {
-      min-height: 22rem;
-      transform: none;
-    }
-
-    .stack-list li {
-      grid-template-columns: 2.5rem 1fr;
-    }
-
-    .stack-list strong,
-    .stack-list p {
-      grid-column: 2;
-    }
-  }
-
-  @media (max-width: 640px) {
-    .about-hero__meta,
-    .about-hero__footer {
-      align-items: flex-start;
-      flex-direction: column;
-    }
-
-    .about-hero__body {
-      gap: var(--space-2xl);
-    }
-
-    .about-hero__statement {
-      padding: var(--space-xl) 0 0;
-      border-top: 1px solid var(--glass-border);
-      border-left: 0;
-    }
-
-    .about-hero__actions {
-      justify-content: flex-start;
-    }
-
-    .principle__note {
-      grid-template-columns: auto 1fr;
-    }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .format-card:nth-child(2) {
-      transform: none;
-    }
-  }
+  main { overflow:clip; }
+  .eyebrow { margin:0 0 1.5rem; color:var(--color-accent-text); font:700 .78rem var(--font-mono); letter-spacing:.1em; text-transform:uppercase; }
+  .about-hero { padding:clamp(3rem,7vw,6rem) 0 clamp(4rem,10vw,8rem); }
+  .about-hero__panel { position:relative; isolation:isolate; overflow:hidden; min-height:35rem; display:flex; flex-direction:column; justify-content:center; padding:clamp(2rem,6vw,6rem); border:1px solid var(--glass-border); border-radius:2rem; background:linear-gradient(120deg,#f7e4eecc 0%,#ebe6facf 42%,#def0fcd6 100%); }
+  [data-theme='dark'] .about-hero__panel { background:linear-gradient(120deg,#4b3043,#423759 50%,#304b5d); }
+  .about-hero__panel>*:not(.hero-shapes) { position:relative; z-index:1; }
+  h1 { max-width:13ch; margin:0 0 2rem; color:#373049; font-size:clamp(3.2rem,8vw,7rem); letter-spacing:-.07em; line-height:1; }
+  [data-theme='dark'] h1 { color:#fff6ff; }
+  h1 span { color:#805fbb; } [data-theme='dark'] h1 span { color:#d7b5f3; }
+  .intro { max-width:39rem; margin:0; color:#514761; font-size:clamp(1.1rem,2vw,1.45rem); line-height:1.7; }
+  [data-theme='dark'] .intro { color:#f1dff0; }
+  .hero-shapes { position:absolute; right:-3%; top:2%; width:44%; height:96%; }
+  .hero-shapes span { position:absolute; display:block; border-radius:38% 62% 54% 46% / 56% 39% 61% 44%; }
+  .hero-shapes span:nth-child(1) { width:85%; height:65%; top:10%; left:12%; background:#c4aff4b8; transform:rotate(28deg); }
+  .hero-shapes span:nth-child(2) { width:55%; height:40%; right:4%; bottom:0; background:#b3dcedcf; transform:rotate(-27deg); }
+  .hero-shapes span:nth-child(3) { right:30%; top:29%; color:#fff; font-size:8rem; text-align:center; }
+  .story { padding:3rem 0 7rem; }
+  .story :global(.container) { display:grid; grid-template-columns:1fr 1fr; gap:clamp(2rem,7vw,7rem); }
+  .story h2,.values h2,.about-cta h2 { max-width:16ch; margin:0; font-size:clamp(2.7rem,5.5vw,5.5rem); line-height:1.06; letter-spacing:-.06em; }
+  .story h2 em { color:var(--color-accent-text); font-family:Georgia,serif; font-weight:400; }
+  .story__body { font-size:1.13rem; line-height:1.85; color:var(--color-text-muted); }
+  .story__body p { margin-bottom:1.4rem; }
+  .values { padding:5rem 0 7rem; }
+  .values h2 { max-width:20ch; }
+  .values__grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; margin-top:3rem; }
+  .values__grid article { padding:2rem; border:1px solid var(--glass-border); border-radius:1.5rem; background:var(--color-surface); }
+  .values__grid article:nth-child(1) { border-top:5px solid #bba1ea; }
+  .values__grid article:nth-child(2) { border-top:5px solid #b2d9ed; }
+  .values__grid article:nth-child(3) { border-top:5px solid #efbccb; }
+  .values__grid article span { color:var(--color-accent-text); font:700 .8rem var(--font-mono); }
+  .values__grid article h3 { font-size:1.8rem; margin:1rem 0; }
+  .values__grid article p { color:var(--color-text-muted); line-height:1.7; }
+  .about-cta { padding:2rem 0 8rem; }
+  .about-cta__panel { padding:clamp(2rem,6vw,5rem); border-radius:2rem; background:color-mix(in srgb,var(--color-surface) 87%,transparent); border:1px solid var(--glass-border); text-align:center; }
+  .about-cta h2 { margin:0 auto 1rem; }
+  .about-cta__panel>p:not(.eyebrow) { color:var(--color-text-muted); margin:0 auto 2rem; max-width:36rem; }
+  .about-cta__actions { display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; }
+  @media (max-width:768px) { .story :global(.container) { grid-template-columns:1fr; } .values__grid { grid-template-columns:1fr; } .about-hero__panel { min-height:30rem; } .hero-shapes { width:60%; opacity:.3; } }
 </style>
