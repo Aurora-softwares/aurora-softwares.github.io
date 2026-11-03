@@ -35,7 +35,8 @@ const staticSrc = isLocalAsset
   ? (src as ImageMetadata).src
   : withBase(src as string);
 const staticWidth = width ?? (isSvg ? (src as ImageMetadata).width : undefined);
-const staticHeight = height ?? (isSvg ? (src as ImageMetadata).height : undefined);
+const staticHeight =
+  height ?? (isSvg ? (src as ImageMetadata).height : undefined);
 
 // When a caller declares a responsive `sizes` but no explicit width list, emit
 // a sensible srcset. All shipped assets are ≥1448px wide, so these stay within
