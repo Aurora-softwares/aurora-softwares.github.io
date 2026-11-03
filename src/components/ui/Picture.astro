@@ -30,6 +30,13 @@ const {
 // Imported assets (ImageMetadata) are optimized to AVIF first, then WebP.
 // Plain string paths (public/ or remote) are rendered as-is.
 const isLocalAsset = typeof src !== 'string';
+const isSvg = isLocalAsset && (src as ImageMetadata).format === 'svg';
+const staticSrc = isLocalAsset
+  ? (src as ImageMetadata).src
+  : withBase(src as string);
+const staticWidth = width ?? (isSvg ? (src as ImageMetadata).width : undefined);
+const staticHeight =
+  height ?? (isSvg ? (src as ImageMetadata).height : undefined);
 
 // When a caller declares a responsive `sizes` but no explicit width list, emit
 // a sensible srcset. All shipped assets are ≥1448px wide, so these stay within
@@ -38,7 +45,7 @@ const resolvedWidths = widths ?? (sizes ? [400, 800, 1200] : undefined);
 ---
 
 {
-  isLocalAsset ? (
+  isLocalAsset && !isSvg ? (
     <AstroPicture
       src={src as ImageMetadata}
       alt={alt}
@@ -52,10 +59,10 @@ const resolvedWidths = widths ?? (sizes ? [400, 800, 1200] : undefined);
     />
   ) : (
     <img
-      src={withBase(src as string)}
+      src={staticSrc}
       alt={alt}
-      width={width}
-      height={height}
+      width={staticWidth}
+      height={staticHeight}
       loading={loading}
       decoding="async"
       fetchpriority={fetchpriority}
