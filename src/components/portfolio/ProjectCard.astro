@@ -51,9 +51,6 @@ const {
         fetchpriority={index === 0 ? 'high' : undefined}
         class="project__image"
       />
-      <span class="project__number" aria-hidden="true">
-        {String(index).padStart(2, '0')}
-      </span>
       {featured && <span class="project__flag">Selected work</span>}
     </div>
 
@@ -127,25 +124,12 @@ const {
     }
   }
 
-  .project__number,
   .project__flag {
     position: absolute;
     z-index: 1;
     color: white;
     background: rgba(12, 14, 24, 0.72);
     border: 1px solid rgba(255, 255, 255, 0.24);
-  }
-
-  .project__number {
-    inset: var(--space-md) auto auto var(--space-md);
-    display: grid;
-    place-items: center;
-    width: 2.75rem;
-    aspect-ratio: 1;
-    border-radius: 50%;
-    font-family: var(--font-mono);
-    font-size: var(--text-xs);
-    letter-spacing: 0.08em;
   }
 
   .project__flag {
