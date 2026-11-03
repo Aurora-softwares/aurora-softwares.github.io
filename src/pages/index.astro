@@ -8,46 +8,37 @@ import { withBase } from '@/lib/url';
 
 const projects = [
   {
-    number: '01',
     name: 'Hydrogen',
     eyebrow: 'Programming language',
     symbol: '{ H }',
     hue: 'lilac',
     description:
-      'A programming language and compiler built to make developing native software feel more straightforward, across different operating systems.',
-    details: 'One language. More possibilities.',
+      'A programming language and compiler for creating native software across operating systems.',
     href: '/work/hydrogen/',
-    docs: 'https://hylang.co.uk/',
   },
   {
-    number: '02',
     name: 'Australis OS',
     eyebrow: 'Operating system',
     symbol: '✳',
     hue: 'peach',
     description:
-      'An operating system being built from the ground up, exploring what a modern, approachable desktop experience can be.',
-    details: 'An operating system with room to grow.',
+      'A from-scratch operating system exploring the foundations of a modern desktop experience.',
     href: '/work/australisos/',
-    docs: 'https://aurora-softwares.github.io/Australis-Docs/',
   },
   {
-    number: '03',
     name: 'Quark IDE',
     eyebrow: 'Development environment',
     symbol: '◈',
     hue: 'sky',
     description:
-      'A friendly workspace for writing, building and exploring Hydrogen projects, with familiar tools and a native desktop feel.',
-    details: 'A happier place to make software.',
+      'A native development environment for writing, building and managing Hydrogen projects.',
     href: '/work/quark/',
-    docs: 'https://aurora-softwares.github.io/Quark-Docs/',
   },
 ];
 ---
 
 <BaseLayout
-  title="Welcome"
+  title="Welcome to Aurora Softwares"
   description="Welcome to Aurora Softwares. Discover Hydrogen, Australis OS and Quark IDE—three connected projects exploring the future of software development."
 >
   <Header />
@@ -57,27 +48,26 @@ const projects = [
         <div class="welcome__grid">
           <div class="welcome__copy">
             <p class="eyebrow">
-              <span class="eyebrow__sparkle" aria-hidden="true">✳</span> Hello from
-              Aurora Softwares
+              Independent software development
             </p>
             <h1 id="welcome-title">
-              A little curiosity.<br /><span>A lot of possibility.</span>
+              Thoughtful software.<br /><span>Built to move forward.</span>
             </h1>
             <p class="welcome__intro">
-              We’re building tools that make creating software feel more open,
-              thoughtful and exciting. From a programming language to an entire
-              operating system, there’s a lot to explore here. Welcome in!
+              Aurora Softwares develops a connected family of technologies: Hydrogen,
+              Quark IDE and Australis OS. Our work combines ambitious technical
+              ideas with clear, considered design.
             </p>
             <div class="actions">
               <Button href="#projects" variant="solid" size="lg"
                 >Explore our projects <span aria-hidden="true">↗</span></Button
               >
               <Button href={withBase('/about/')} variant="outline" size="lg"
-                >Get to know us</Button
+                >About Aurora</Button
               >
             </div>
             <p class="welcome__note">
-              Made with curiosity · Shared in the open
+              Independent development · Open source projects
             </p>
           </div>
           <div class="art" aria-hidden="true">
@@ -89,12 +79,12 @@ const projects = [
             <div class="art__star art__star--one">✳</div>
             <div class="art__star art__star--two">✦</div>
             <div class="art__card art__card--one">
-              <span class="art__dot"></span> imagine <strong>build</strong> create
+              <span class="art__dot"></span> Language <strong>Tools</strong> Systems
             </div>
             <div class="art__card art__card--two">
               <span class="art__code">{'{ H }'}</span><span>hello, world!</span>
             </div>
-            <div class="art__label">GOOD IDEAS START SOMEWHERE ↗</div>
+            <div class="art__label">ENGINEERED WITH PURPOSE</div>
           </div>
         </div>
       </Container>
@@ -102,9 +92,9 @@ const projects = [
 
     <section class="hello-strip" aria-label="What we make">
       <Container size="xl">
-        <span>Thoughtful by design</span><span aria-hidden="true">✳</span>
-        <span>Curious by nature</span><span aria-hidden="true">✳</span>
-        <span>Built to explore</span>
+        <span>Programming languages</span>
+        <span>Development tools</span>
+        <span>Operating systems</span>
       </Container>
     </section>
 
@@ -116,13 +106,13 @@ const projects = [
       <Container size="xl">
         <div class="section-intro">
           <div>
-            <p class="eyebrow">Meet the family</p><h2 id="projects-title">
-              Big ideas, <em>lovely little details.</em>
+            <p class="eyebrow">Our projects</p><h2 id="projects-title">
+              Different disciplines. <em>One shared vision.</em>
             </h2>
           </div>
           <p>
-            Our projects are different pieces of the same bigger picture: making
-            it easier to imagine, build and use great software.
+            Discover the projects we are developing and how they connect—from
+            the language to the development tools and operating system.
           </p>
         </div>
         <div class="project-grid">
@@ -140,25 +130,13 @@ const projects = [
                 </div>
                 <div class="project-card__body">
                   <p class="project-card__label">
-                    {project.number} / {project.eyebrow}
+                    {project.eyebrow}
                   </p>
                   <h3>{project.name}</h3>
                   <p>{project.description}</p>
-                  <small>{project.details}</small>
                   <div class="project-card__links">
                     <a href={withBase(project.href)}>
-                      Meet {project.name} <span aria-hidden="true">↗</span>
-                    </a>
-                    <a
-                      href={project.docs}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Documentation{' '}
-                      <>
-                        <span aria-hidden="true">↗</span>
-                        <span class="sr-only"> (opens in new tab)</span>
-                      </>
+                      Explore {project.name} <span aria-hidden="true">→</span>
                     </a>
                   </div>
                 </div>
@@ -177,67 +155,34 @@ const projects = [
     <section class="story-section" aria-labelledby="story-title">
       <Container size="xl">
         <div class="story-panel">
-          <div class="story-panel__doodle" aria-hidden="true">
-            <span>✳</span><span>◌</span><span>✦</span>
-          </div>
+          <div class="story-panel__doodle" aria-hidden="true"></div>
           <div class="story-panel__content">
-            <p class="eyebrow">A little about us</p>
+            <p class="eyebrow">Our approach</p>
             <h2 id="story-title">
-              Good software starts with <em>“what if?”</em>
+              Curiosity meets <em>careful engineering.</em>
             </h2>
             <p>
-              Aurora Softwares is a home for curious experiments and long-term
-              ideas. We care about the details, enjoy learning as we build, and
-              believe the journey should be just as interesting as the end
-              result.
+              Our projects balance ambitious technical goals with a clear focus
+              on usability. We work across disciplines with an approach that
+              values clarity, reliability and continuous improvement.
             </p>
             <Button href={withBase('/about/')} variant="outline" size="lg"
-              >Our story <span aria-hidden="true">↗</span></Button
+              >Learn about Aurora <span aria-hidden="true">→</span></Button
             >
           </div>
         </div>
       </Container>
     </section>
 
-    <section class="explore-section" aria-labelledby="explore-title">
-      <Container size="xl">
-        <p class="eyebrow">Find your starting point</p><h2 id="explore-title">
-          Come on in. <em>Have a look around.</em>
-        </h2>
-        <div class="explore-grid">
-          <a
-            href="https://hylang.co.uk/"
-            target="_blank"
-            rel="noopener noreferrer"
-            ><span aria-hidden="true">⌘</span><strong>Learn Hydrogen</strong
-            ><small>Language guides, examples and documentation ↗</small></a
-          >
-          <a
-            href="https://aurora-softwares.github.io/Australis-Docs/"
-            target="_blank"
-            rel="noopener noreferrer"
-            ><span aria-hidden="true">◈</span><strong>Discover Australis</strong
-            ><small>Take a closer look at the operating system ↗</small></a
-          >
-          <a
-            href="https://aurora-softwares.github.io/Quark-Docs/"
-            target="_blank"
-            rel="noopener noreferrer"
-            ><span aria-hidden="true">✧</span><strong>Get to know Quark</strong
-            ><small>Explore the IDE and its documentation ↗</small></a
-          >
-        </div>
-      </Container>
-    </section>
     <section class="closing" aria-label="Aurora Softwares on GitHub">
       <Container size="xl"
-        ><p>Thanks for stopping by ♡</p><h2>
-          There’s always <em>something new</em> taking shape.
+        ><p>Open development</p><h2>
+          Follow what we’re <em>building next.</em>
         </h2><Button
           href="https://github.com/Aurora-softwares"
           external
           variant="solid"
-          size="lg">Find us on GitHub <span aria-hidden="true">↗</span></Button
+          size="lg">Explore on GitHub <span aria-hidden="true">↗</span></Button
         ></Container
       >
     </section>
@@ -279,9 +224,9 @@ const projects = [
   .welcome h1 {
     max-width: 12ch;
     margin: 0 0 2rem;
-    font-size: clamp(3.5rem, 7.8vw, 7.8rem);
-    line-height: 0.98;
-    letter-spacing: -0.077em;
+    font-size: clamp(3.3rem, 6.8vw, 6.7rem);
+    line-height: 1.03;
+    letter-spacing: -0.066em;
   }
   .welcome h1 span {
     background: linear-gradient(110deg, #ab81e8, #7da9f2 54%, #e8a3bf);
@@ -321,13 +266,13 @@ const projects = [
       #c9e7fe 42%,
       transparent 70%
     );
-    opacity: 0.6;
-    filter: blur(32px);
+    opacity: 0.4;
+    filter: blur(40px);
   }
   .art__blob {
     position: absolute;
     border-radius: 50% 50% 38% 62% / 53% 30% 70% 47%;
-    filter: drop-shadow(0 2rem 2rem #596c9c20);
+    filter: drop-shadow(0 1.5rem 2rem #596c9c18);
   }
   .art__blob--lilac {
     inset: 11% 25% 26% 13%;
@@ -379,7 +324,7 @@ const projects = [
     gap: 0.8rem;
     border: 1px solid #ffffffc4;
     border-radius: 1.2rem;
-    background: #ffffffb8;
+    background: #ffffffd4;
     backdrop-filter: blur(16px);
     box-shadow: 0 1rem 3rem #555f9624;
     color: #434462;
@@ -389,7 +334,7 @@ const projects = [
   .art__card--one {
     top: 26%;
     left: 0;
-    transform: rotate(-8deg);
+    transform: rotate(-4deg);
   }
   .art__card--one strong {
     color: #8f63d4;
@@ -403,7 +348,7 @@ const projects = [
   .art__card--two {
     right: 0;
     bottom: 27%;
-    transform: rotate(7deg);
+    transform: rotate(4deg);
   }
   .art__code {
     display: grid;
@@ -441,8 +386,7 @@ const projects = [
     color: #b38bdc;
     font-size: 1.5rem;
   }
-  .projects-section,
-  .explore-section {
+  .projects-section {
     padding: clamp(6rem, 10vw, 10rem) 0;
   }
   .section-intro {
@@ -454,7 +398,6 @@ const projects = [
   }
   .section-intro h2,
   .story-panel h2,
-  .explore-section h2,
   .closing h2 {
     max-width: 14ch;
     margin: 0;
@@ -464,7 +407,6 @@ const projects = [
   }
   .section-intro h2 em,
   .story-panel h2 em,
-  .explore-section h2 em,
   .closing h2 em {
     color: var(--color-accent-text);
     font-family: Georgia, serif;
@@ -486,7 +428,7 @@ const projects = [
     flex-direction: column;
     overflow: hidden;
     border: 1px solid var(--glass-border);
-    border-radius: 1.75rem;
+    border-radius: 1.35rem;
     background: color-mix(in srgb, var(--color-surface) 90%, transparent);
     box-shadow: 0 10px 35px #4c4d8010;
     transition:
@@ -494,8 +436,8 @@ const projects = [
       box-shadow 0.25s ease;
   }
   .project-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 20px 45px #4c4d8021;
+    transform: translateY(-3px);
+    box-shadow: 0 18px 35px #4c4d801a;
   }
   .project-card__art {
     position: relative;
@@ -614,22 +556,24 @@ const projects = [
     position: relative;
     min-height: 19rem;
   }
-  .story-panel__doodle span {
+  .story-panel__doodle::before,
+  .story-panel__doodle::after {
+    content: '';
     position: absolute;
-    color: #9170cf;
-    font-size: 9rem;
+    border-radius: 46% 54% 61% 39% / 56% 43% 57% 44%;
   }
-  .story-panel__doodle span:nth-child(2) {
-    top: 0;
-    left: 35%;
-    color: #73a4c9;
-    font-size: 17rem;
+  .story-panel__doodle::before {
+    inset: 8% 19% 12% 0;
+    background: linear-gradient(145deg, #c6b2eccc, #a9c9efaa);
+    transform: rotate(-15deg);
   }
-  .story-panel__doodle span:nth-child(3) {
-    bottom: 0;
-    left: 5%;
-    color: #e795b0;
-    font-size: 6rem;
+  .story-panel__doodle::after {
+    width: 46%;
+    aspect-ratio: 1;
+    top: 5%;
+    right: 12%;
+    border: 2px solid #ffffffa8;
+    transform: rotate(18deg);
   }
   .story-panel__content {
     position: relative;
@@ -644,49 +588,6 @@ const projects = [
     line-height: 1.8;
     font-size: 1.05rem;
     margin: 1.5rem 0 2rem;
-  }
-  .explore-section {
-    text-align: center;
-  }
-  .explore-section > .container > .eyebrow {
-    justify-content: center;
-  }
-  .explore-section h2 {
-    max-width: none;
-  }
-  .explore-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    margin-top: 3rem;
-    text-align: left;
-  }
-  .explore-grid a {
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
-    padding: 2rem;
-    color: var(--color-text);
-    border: 1px solid var(--glass-border);
-    border-radius: 1.4rem;
-    background: var(--color-surface);
-    text-decoration: none;
-    transition: transform 0.2s ease;
-  }
-  .explore-grid a:hover {
-    transform: translateY(-4px);
-  }
-  .explore-grid a > span {
-    color: var(--color-accent-text);
-    font-size: 2.6rem;
-  }
-  .explore-grid strong {
-    font-size: 1.35rem;
-  }
-  .explore-grid small {
-    color: var(--color-text-muted);
-    font-size: 0.95rem;
-    line-height: 1.55;
   }
   .closing {
     padding: 5rem 0 8rem;
@@ -748,8 +649,7 @@ const projects = [
     .hello-strip span:nth-child(even) {
       display: none;
     }
-    .project-grid,
-    .explore-grid {
+    .project-grid {
       grid-template-columns: 1fr;
     }
     .project-card:last-child {
@@ -761,23 +661,12 @@ const projects = [
     .story-panel__doodle {
       min-height: 9rem;
     }
-    .story-panel__doodle span {
-      font-size: 6rem;
-    }
-    .story-panel__doodle span:nth-child(2) {
-      font-size: 10rem;
-    }
-    .story-panel__doodle span:nth-child(3) {
-      font-size: 3rem;
-    }
   }
   @media (prefers-reduced-motion: reduce) {
-    .project-card,
-    .explore-grid a {
+    .project-card {
       transition: none;
     }
-    .project-card:hover,
-    .explore-grid a:hover {
+    .project-card:hover {
       transform: none;
     }
   }
