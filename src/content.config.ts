@@ -1,5 +1,7 @@
 import { defineCollection } from 'astro:content';
 import { glob } from 'astro/loaders';
+import { docsLoader } from '@astrojs/starlight/loaders';
+import { docsSchema } from '@astrojs/starlight/schema';
 import { z } from 'zod';
 import { classifyHref } from '@/lib/url';
 
@@ -172,4 +174,9 @@ const landing = defineCollection({
   }),
 });
 
-export const collections = { blog, projects, landing };
+export const collections = {
+  blog,
+  projects,
+  landing,
+  docs: defineCollection({ loader: docsLoader(), schema: docsSchema() }),
+};
