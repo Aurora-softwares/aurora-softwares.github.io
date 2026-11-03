@@ -1,0 +1,66 @@
+/*
+ * Starlight documentation design.
+ * Astro Haze remains responsible for the company frontend. Starlight gets
+ * its own warm, reading-first palette without importing Haze's CSS reset.
+ */
+:root {
+  --sl-content-width: 52rem;
+  --sl-text-body: 1.04rem;
+  --sl-font: system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  --sl-font-mono: 'SF Mono', Monaco, 'Cascadia Code', monospace;
+  --sl-color-accent-low: #39274b;
+  --sl-color-accent: #cbb0f6;
+  --sl-color-accent-high: #eee0ff;
+}
+
+:root[data-theme='light'] {
+  --sl-color-accent-low: #f1e7fa;
+  --sl-color-accent: #7548aa;
+  --sl-color-accent-high: #48276c;
+  --sl-color-bg: #fffaf5;
+  --sl-color-bg-nav: #fff7f1;
+  --sl-color-bg-sidebar: #fff9f5;
+  --sl-color-bg-inline-code: #f3eaf2;
+  --sl-color-hairline-light: #eee0df;
+  --sl-color-hairline-shade: #e9dce2;
+}
+
+:root[data-theme='dark'] {
+  --sl-color-bg: #1b1a27;
+  --sl-color-bg-nav: #232133;
+  --sl-color-bg-sidebar: #201e2d;
+  --sl-color-bg-inline-code: #322c3c;
+}
+
+.site-title {
+  font-weight: 750;
+  letter-spacing: -0.045em;
+}
+
+h1, h2, h3 {
+  letter-spacing: -0.025em;
+}
+
+:root[data-theme='light'] .main-pane {
+  background-image:
+    radial-gradient(ellipse 38rem 22rem at 98% 0%, #f7e9fa90, transparent 65%),
+    radial-gradient(ellipse 30rem 18rem at 0% 14%, #ffedda66, transparent 67%);
+}
+
+.sl-markdown-content a {
+  text-underline-offset: 0.18em;
+}
+
+.sl-markdown-content :is(blockquote, .starlight-aside) {
+  border-radius: 0.75rem;
+}
+
+.sl-markdown-content :is(pre, table) {
+  border-radius: 0.75rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+  }
+}
