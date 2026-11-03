@@ -8,7 +8,7 @@ import pagefind from 'astro-pagefind';
 import siteConfig from './src/site.config.ts';
 import { satteri } from '@astrojs/markdown-satteri';
 import satteriBaseUrls from './src/lib/satteri-base-urls.ts';
-import ExpressiveCode from 'astro-expressive-code'
+import ExpressiveCode from 'astro-expressive-code';
 
 const SITE = 'https://aurora-softwares.github.io/';
 const BASE = '/';
@@ -57,14 +57,21 @@ export default defineConfig({
   // static output on build and serves the prebuilt index during `astro dev`
   // (run a build once to generate it).
   integrations: [
-	ExpressiveCode(),
+    ExpressiveCode(),
     starlight({
       title: 'Aurora Softwares Docs',
-      description: 'Friendly introductions to Aurora Softwares, its projects and their documentation.',
+      description:
+        'Friendly introductions to Aurora Softwares, its projects and their documentation.',
       favicon: '/favicon.svg',
       disable404Route: true,
       customCss: ['./src/styles/starlight.css'],
-      social: [{ icon: 'github', label: 'Aurora Softwares on GitHub', href: 'https://github.com/Aurora-softwares' }],
+      social: [
+        {
+          icon: 'github',
+          label: 'Aurora Softwares on GitHub',
+          href: 'https://github.com/Aurora-softwares',
+        },
+      ],
       sidebar: [
         { label: 'Aurora Softwares', link: '/' },
         { slug: 'docs' },
@@ -80,8 +87,14 @@ export default defineConfig({
           label: 'Full project documentation',
           items: [
             { label: 'Hydrogen', link: 'https://hylang.co.uk/' },
-            { label: 'Australis OS', link: 'https://aurora-softwares.github.io/Australis-Docs/' },
-            { label: 'Quark IDE', link: 'https://aurora-softwares.github.io/Quark-Docs/' },
+            {
+              label: 'Australis OS',
+              link: 'https://aurora-softwares.github.io/Australis-Docs/',
+            },
+            {
+              label: 'Quark IDE',
+              link: 'https://aurora-softwares.github.io/Quark-Docs/',
+            },
           ],
         },
       ],

@@ -7,13 +7,31 @@ import Button from '@/components/ui/Button.astro';
 import { withBase } from '@/lib/url';
 
 const principles = [
-  { number: '01', title: 'Stay curious', description: 'Ask the questions, follow the ideas and enjoy learning along the way.' },
-  { number: '02', title: 'Build with care', description: 'Pay attention to the little details that make software easier to understand and nicer to use.' },
-  { number: '03', title: 'Share the journey', description: 'Let people explore the code, the progress and the thinking behind our projects.' },
+  {
+    number: '01',
+    title: 'Stay curious',
+    description:
+      'Ask the questions, follow the ideas and enjoy learning along the way.',
+  },
+  {
+    number: '02',
+    title: 'Build with care',
+    description:
+      'Pay attention to the little details that make software easier to understand and nicer to use.',
+  },
+  {
+    number: '03',
+    title: 'Share the journey',
+    description:
+      'Let people explore the code, the progress and the thinking behind our projects.',
+  },
 ];
 ---
 
-<BaseLayout title="About Aurora Softwares" description="Get to know Aurora Softwares, our approach to building software and the projects we are exploring.">
+<BaseLayout
+  title="About Aurora Softwares"
+  description="Get to know Aurora Softwares, our approach to building software and the projects we are exploring."
+>
   <Header />
   <main id="main" tabindex="-1">
     <section class="about-hero">
@@ -21,30 +39,63 @@ const principles = [
         <div class="about-hero__panel">
           <p class="eyebrow">Oh, hello! ✳</p>
           <h1>Made with curiosity.<br /><span>Built with purpose.</span></h1>
-          <p class="intro">Aurora Softwares is a home for ambitious software ideas. We explore how technology works, imagine how it could feel, and build the tools we wish existed.</p>
-          <div class="hero-shapes" aria-hidden="true"><span></span><span></span><span>✳</span></div>
+          <p class="intro">
+            Aurora Softwares is a home for ambitious software ideas. We explore
+            how technology works, imagine how it could feel, and build the tools
+            we wish existed.
+          </p>
+          <div class="hero-shapes" aria-hidden="true">
+            <span></span><span></span><span>✳</span>
+          </div>
         </div>
       </Container>
     </section>
 
     <section class="story">
       <Container size="xl">
-        <div class="story__heading"><p class="eyebrow">A little about Aurora</p><h2>Wondering <em>what if?</em><br />Then getting to work.</h2></div>
+        <div class="story__heading">
+          <p class="eyebrow">A little about Aurora</p><h2>
+            Wondering <em>what if?</em><br />Then getting to work.
+          </h2>
+        </div>
         <div class="story__body">
-          <p>Some projects begin with a tiny experiment. Others begin with a much bigger question—like what it takes to build a programming language, an IDE or even an operating system.</p>
-          <p>At Aurora Softwares, we make space for both. Hydrogen, Quark IDE and Australis OS are separate projects that connect through a shared interest in approachable software and meaningful technical challenges.</p>
-          <p>They're works in progress, and that's part of the story. We want visitors to be able to see what each project is, where it is going and how to follow along.</p>
+          <p>
+            Some projects begin with a tiny experiment. Others begin with a much
+            bigger question—like what it takes to build a programming language,
+            an IDE or even an operating system.
+          </p>
+          <p>
+            At Aurora Softwares, we make space for both. Hydrogen, Quark IDE and
+            Australis OS are separate projects that connect through a shared
+            interest in approachable software and meaningful technical
+            challenges.
+          </p>
+          <p>
+            They're works in progress, and that's part of the story. We want
+            visitors to be able to see what each project is, where it is going
+            and how to follow along.
+          </p>
         </div>
       </Container>
     </section>
 
     <section class="values" aria-labelledby="values-title">
       <Container size="xl">
-        <p class="eyebrow">Our approach</p><h2 id="values-title">The things that matter to us.</h2>
+        <p class="eyebrow">Our approach</p><h2 id="values-title">
+          The things that matter to us.
+        </h2>
         <div class="values__grid">
-          {principles.map((item) => (
-            <article><span>{item.number}</span><h3>{item.title}</h3><p>{item.description}</p></article>
-          ))}
+          {
+            principles.map((item) => (
+              <article>
+                <>
+                  <span>{item.number}</span>
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
+                </>
+              </article>
+            ))
+          }
         </div>
       </Container>
     </section>
@@ -52,12 +103,26 @@ const principles = [
     <section class="about-cta">
       <Container size="xl">
         <div class="about-cta__panel">
-          <p class="eyebrow">There's more to discover</p><h2>Come meet the projects.</h2>
-          <p>Explore the ideas in progress, read the documentation or take a look at the source code.</p>
+          <p class="eyebrow">There's more to discover</p><h2>
+            Come meet the projects.
+          </h2>
+          <p>
+            Explore the ideas in progress, read the documentation or take a look
+            at the source code.
+          </p>
           <div class="about-cta__actions">
-            <Button href={withBase('/work/')} variant="solid" size="lg">Meet the projects ↗</Button>
-            <Button href={withBase('/docs/')} variant="outline" size="lg">Browse documentation</Button>
-            <Button href="https://github.com/Aurora-softwares" external variant="outline" size="lg">Find us on GitHub ↗</Button>
+            <Button href={withBase('/work/')} variant="solid" size="lg"
+              >Meet the projects ↗</Button
+            >
+            <Button href={withBase('/docs/')} variant="outline" size="lg"
+              >Browse documentation</Button
+            >
+            <Button
+              href="https://github.com/Aurora-softwares"
+              external
+              variant="outline"
+              size="lg">Find us on GitHub ↗</Button
+            >
           </div>
         </div>
       </Container>
@@ -67,42 +132,212 @@ const principles = [
 </BaseLayout>
 
 <style>
-  main { overflow:clip; }
-  .eyebrow { margin:0 0 1.5rem; color:var(--color-accent-text); font:700 .78rem var(--font-mono); letter-spacing:.1em; text-transform:uppercase; }
-  .about-hero { padding:clamp(3rem,7vw,6rem) 0 clamp(4rem,10vw,8rem); }
-  .about-hero__panel { position:relative; isolation:isolate; overflow:hidden; min-height:35rem; display:flex; flex-direction:column; justify-content:center; padding:clamp(2rem,6vw,6rem); border:1px solid var(--glass-border); border-radius:2rem; background:linear-gradient(120deg,#f7e4eecc 0%,#ebe6facf 42%,#def0fcd6 100%); }
-  [data-theme='dark'] .about-hero__panel { background:linear-gradient(120deg,#4b3043,#423759 50%,#304b5d); }
-  .about-hero__panel>*:not(.hero-shapes) { position:relative; z-index:1; }
-  h1 { max-width:13ch; margin:0 0 2rem; color:#373049; font-size:clamp(3.2rem,8vw,7rem); letter-spacing:-.07em; line-height:1; }
-  [data-theme='dark'] h1 { color:#fff6ff; }
-  h1 span { color:#805fbb; } [data-theme='dark'] h1 span { color:#d7b5f3; }
-  .intro { max-width:39rem; margin:0; color:#514761; font-size:clamp(1.1rem,2vw,1.45rem); line-height:1.7; }
-  [data-theme='dark'] .intro { color:#f1dff0; }
-  .hero-shapes { position:absolute; right:-3%; top:2%; width:44%; height:96%; }
-  .hero-shapes span { position:absolute; display:block; border-radius:38% 62% 54% 46% / 56% 39% 61% 44%; }
-  .hero-shapes span:nth-child(1) { width:85%; height:65%; top:10%; left:12%; background:#c4aff4b8; transform:rotate(28deg); }
-  .hero-shapes span:nth-child(2) { width:55%; height:40%; right:4%; bottom:0; background:#b3dcedcf; transform:rotate(-27deg); }
-  .hero-shapes span:nth-child(3) { right:30%; top:29%; color:#fff; font-size:8rem; text-align:center; }
-  .story { padding:3rem 0 7rem; }
-  .story :global(.container) { display:grid; grid-template-columns:1fr 1fr; gap:clamp(2rem,7vw,7rem); }
-  .story h2,.values h2,.about-cta h2 { max-width:16ch; margin:0; font-size:clamp(2.7rem,5.5vw,5.5rem); line-height:1.06; letter-spacing:-.06em; }
-  .story h2 em { color:var(--color-accent-text); font-family:Georgia,serif; font-weight:400; }
-  .story__body { font-size:1.13rem; line-height:1.85; color:var(--color-text-muted); }
-  .story__body p { margin-bottom:1.4rem; }
-  .values { padding:5rem 0 7rem; }
-  .values h2 { max-width:20ch; }
-  .values__grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; margin-top:3rem; }
-  .values__grid article { padding:2rem; border:1px solid var(--glass-border); border-radius:1.5rem; background:var(--color-surface); }
-  .values__grid article:nth-child(1) { border-top:5px solid #bba1ea; }
-  .values__grid article:nth-child(2) { border-top:5px solid #b2d9ed; }
-  .values__grid article:nth-child(3) { border-top:5px solid #efbccb; }
-  .values__grid article span { color:var(--color-accent-text); font:700 .8rem var(--font-mono); }
-  .values__grid article h3 { font-size:1.8rem; margin:1rem 0; }
-  .values__grid article p { color:var(--color-text-muted); line-height:1.7; }
-  .about-cta { padding:2rem 0 8rem; }
-  .about-cta__panel { padding:clamp(2rem,6vw,5rem); border-radius:2rem; background:color-mix(in srgb,var(--color-surface) 87%,transparent); border:1px solid var(--glass-border); text-align:center; }
-  .about-cta h2 { margin:0 auto 1rem; }
-  .about-cta__panel>p:not(.eyebrow) { color:var(--color-text-muted); margin:0 auto 2rem; max-width:36rem; }
-  .about-cta__actions { display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; }
-  @media (max-width:768px) { .story :global(.container) { grid-template-columns:1fr; } .values__grid { grid-template-columns:1fr; } .about-hero__panel { min-height:30rem; } .hero-shapes { width:60%; opacity:.3; } }
+  main {
+    overflow: clip;
+  }
+  .eyebrow {
+    margin: 0 0 1.5rem;
+    color: var(--color-accent-text);
+    font: 700 0.78rem var(--font-mono);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .about-hero {
+    padding: clamp(3rem, 7vw, 6rem) 0 clamp(4rem, 10vw, 8rem);
+  }
+  .about-hero__panel {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    min-height: 35rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: clamp(2rem, 6vw, 6rem);
+    border: 1px solid var(--glass-border);
+    border-radius: 2rem;
+    background: linear-gradient(
+      120deg,
+      #f7e4eecc 0%,
+      #ebe6facf 42%,
+      #def0fcd6 100%
+    );
+  }
+  [data-theme='dark'] .about-hero__panel {
+    background: linear-gradient(120deg, #4b3043, #423759 50%, #304b5d);
+  }
+  .about-hero__panel > *:not(.hero-shapes) {
+    position: relative;
+    z-index: 1;
+  }
+  h1 {
+    max-width: 13ch;
+    margin: 0 0 2rem;
+    color: #373049;
+    font-size: clamp(3.2rem, 8vw, 7rem);
+    letter-spacing: -0.07em;
+    line-height: 1;
+  }
+  [data-theme='dark'] h1 {
+    color: #fff6ff;
+  }
+  h1 span {
+    color: #805fbb;
+  }
+  [data-theme='dark'] h1 span {
+    color: #d7b5f3;
+  }
+  .intro {
+    max-width: 39rem;
+    margin: 0;
+    color: #514761;
+    font-size: clamp(1.1rem, 2vw, 1.45rem);
+    line-height: 1.7;
+  }
+  [data-theme='dark'] .intro {
+    color: #f1dff0;
+  }
+  .hero-shapes {
+    position: absolute;
+    right: -3%;
+    top: 2%;
+    width: 44%;
+    height: 96%;
+  }
+  .hero-shapes span {
+    position: absolute;
+    display: block;
+    border-radius: 38% 62% 54% 46% / 56% 39% 61% 44%;
+  }
+  .hero-shapes span:nth-child(1) {
+    width: 85%;
+    height: 65%;
+    top: 10%;
+    left: 12%;
+    background: #c4aff4b8;
+    transform: rotate(28deg);
+  }
+  .hero-shapes span:nth-child(2) {
+    width: 55%;
+    height: 40%;
+    right: 4%;
+    bottom: 0;
+    background: #b3dcedcf;
+    transform: rotate(-27deg);
+  }
+  .hero-shapes span:nth-child(3) {
+    right: 30%;
+    top: 29%;
+    color: #fff;
+    font-size: 8rem;
+    text-align: center;
+  }
+  .story {
+    padding: 3rem 0 7rem;
+  }
+  .story :global(.container) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(2rem, 7vw, 7rem);
+  }
+  .story h2,
+  .values h2,
+  .about-cta h2 {
+    max-width: 16ch;
+    margin: 0;
+    font-size: clamp(2.7rem, 5.5vw, 5.5rem);
+    line-height: 1.06;
+    letter-spacing: -0.06em;
+  }
+  .story h2 em {
+    color: var(--color-accent-text);
+    font-family: Georgia, serif;
+    font-weight: 400;
+  }
+  .story__body {
+    font-size: 1.13rem;
+    line-height: 1.85;
+    color: var(--color-text-muted);
+  }
+  .story__body p {
+    margin-bottom: 1.4rem;
+  }
+  .values {
+    padding: 5rem 0 7rem;
+  }
+  .values h2 {
+    max-width: 20ch;
+  }
+  .values__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 3rem;
+  }
+  .values__grid article {
+    padding: 2rem;
+    border: 1px solid var(--glass-border);
+    border-radius: 1.5rem;
+    background: var(--color-surface);
+  }
+  .values__grid article:nth-child(1) {
+    border-top: 5px solid #bba1ea;
+  }
+  .values__grid article:nth-child(2) {
+    border-top: 5px solid #b2d9ed;
+  }
+  .values__grid article:nth-child(3) {
+    border-top: 5px solid #efbccb;
+  }
+  .values__grid article span {
+    color: var(--color-accent-text);
+    font: 700 0.8rem var(--font-mono);
+  }
+  .values__grid article h3 {
+    font-size: 1.8rem;
+    margin: 1rem 0;
+  }
+  .values__grid article p {
+    color: var(--color-text-muted);
+    line-height: 1.7;
+  }
+  .about-cta {
+    padding: 2rem 0 8rem;
+  }
+  .about-cta__panel {
+    padding: clamp(2rem, 6vw, 5rem);
+    border-radius: 2rem;
+    background: color-mix(in srgb, var(--color-surface) 87%, transparent);
+    border: 1px solid var(--glass-border);
+    text-align: center;
+  }
+  .about-cta h2 {
+    margin: 0 auto 1rem;
+  }
+  .about-cta__panel > p:not(.eyebrow) {
+    color: var(--color-text-muted);
+    margin: 0 auto 2rem;
+    max-width: 36rem;
+  }
+  .about-cta__actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  @media (max-width: 768px) {
+    .story :global(.container) {
+      grid-template-columns: 1fr;
+    }
+    .values__grid {
+      grid-template-columns: 1fr;
+    }
+    .about-hero__panel {
+      min-height: 30rem;
+    }
+    .hero-shapes {
+      width: 60%;
+      opacity: 0.3;
+    }
+  }
 </style>

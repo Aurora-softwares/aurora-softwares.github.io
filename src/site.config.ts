@@ -77,7 +77,8 @@ export interface SiteConfig {
 const siteConfig: SiteConfig = {
   name: 'Aurora Softwares',
   title: 'Aurora Softwares — Thoughtful software for curious minds',
-  description: 'Meet Aurora Softwares, the home of Hydrogen, Australis OS and Quark IDE. Explore the projects, documentation and open-source development.',
+  description:
+    'Meet Aurora Softwares, the home of Hydrogen, Australis OS and Quark IDE. Explore the projects, documentation and open-source development.',
   author: 'Aurora Softwares',
   url: 'https://aurora-softwares.github.io',
   ogImage: '/og-image.png',

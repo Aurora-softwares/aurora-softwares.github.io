@@ -13,7 +13,8 @@ const projects = [
     eyebrow: 'Programming language',
     symbol: '{ H }',
     hue: 'lilac',
-    description: 'A programming language and compiler built to make developing native software feel more straightforward, across different operating systems.',
+    description:
+      'A programming language and compiler built to make developing native software feel more straightforward, across different operating systems.',
     details: 'One language. More possibilities.',
     href: '/work/hydrogen/',
     docs: 'https://hylang.co.uk/',
@@ -24,7 +25,8 @@ const projects = [
     eyebrow: 'Operating system',
     symbol: '✳',
     hue: 'sky',
-    description: 'An operating system being built from the ground up, exploring what a modern, approachable desktop experience can be.',
+    description:
+      'An operating system being built from the ground up, exploring what a modern, approachable desktop experience can be.',
     details: 'An operating system with room to grow.',
     href: '/work/australisOS/',
     docs: 'https://aurora-softwares.github.io/Australis-Docs/',
@@ -35,7 +37,8 @@ const projects = [
     eyebrow: 'Development environment',
     symbol: '◈',
     hue: 'peach',
-    description: 'A friendly workspace for writing, building and exploring Hydrogen projects, with familiar tools and a native desktop feel.',
+    description:
+      'A friendly workspace for writing, building and exploring Hydrogen projects, with familiar tools and a native desktop feel.',
     details: 'A happier place to make software.',
     href: '/work/quark/',
     docs: 'https://aurora-softwares.github.io/Quark-Docs/',
@@ -53,14 +56,29 @@ const projects = [
       <Container size="xl">
         <div class="welcome__grid">
           <div class="welcome__copy">
-            <p class="eyebrow"><span class="eyebrow__sparkle" aria-hidden="true">✳</span> Hello from Aurora Softwares</p>
-            <h1 id="welcome-title">A little curiosity.<br /><span>A lot of possibility.</span></h1>
-            <p class="welcome__intro">We’re building tools that make creating software feel more open, thoughtful and exciting. From a programming language to an entire operating system, there’s a lot to explore here. Welcome in!</p>
+            <p class="eyebrow">
+              <span class="eyebrow__sparkle" aria-hidden="true">✳</span> Hello from
+              Aurora Softwares
+            </p>
+            <h1 id="welcome-title">
+              A little curiosity.<br /><span>A lot of possibility.</span>
+            </h1>
+            <p class="welcome__intro">
+              We’re building tools that make creating software feel more open,
+              thoughtful and exciting. From a programming language to an entire
+              operating system, there’s a lot to explore here. Welcome in!
+            </p>
             <div class="actions">
-              <Button href="#projects" variant="solid" size="lg">Explore our projects <span aria-hidden="true">↗</span></Button>
-              <Button href={withBase('/about/')} variant="outline" size="lg">Get to know us</Button>
+              <Button href="#projects" variant="solid" size="lg"
+                >Explore our projects <span aria-hidden="true">↗</span></Button
+              >
+              <Button href={withBase('/about/')} variant="outline" size="lg"
+                >Get to know us</Button
+              >
             </div>
-            <p class="welcome__note">Made with curiosity · Shared in the open</p>
+            <p class="welcome__note">
+              Made with curiosity · Shared in the open
+            </p>
           </div>
           <div class="art" aria-hidden="true">
             <div class="art__glow"></div>
@@ -70,8 +88,12 @@ const projects = [
             <div class="art__ring"></div>
             <div class="art__star art__star--one">✳</div>
             <div class="art__star art__star--two">✦</div>
-            <div class="art__card art__card--one"><span class="art__dot"></span> imagine <strong>build</strong> create</div>
-            <div class="art__card art__card--two"><span class="art__code">{ H }</span><span>hello, world!</span></div>
+            <div class="art__card art__card--one">
+              <span class="art__dot"></span> imagine <strong>build</strong> create
+            </div>
+            <div class="art__card art__card--two">
+              <span class="art__code">{H}</span><span>hello, world!</span>
+            </div>
             <div class="art__label">GOOD IDEAS START SOMEWHERE ↗</div>
           </div>
         </div>
@@ -86,45 +108,91 @@ const projects = [
       </Container>
     </section>
 
-    <section class="projects-section" id="projects" aria-labelledby="projects-title">
+    <section
+      class="projects-section"
+      id="projects"
+      aria-labelledby="projects-title"
+    >
       <Container size="xl">
         <div class="section-intro">
-          <div><p class="eyebrow">Meet the family</p><h2 id="projects-title">Big ideas, <em>lovely little details.</em></h2></div>
-          <p>Our projects are different pieces of the same bigger picture: making it easier to imagine, build and use great software.</p>
+          <div>
+            <p class="eyebrow">Meet the family</p><h2 id="projects-title">
+              Big ideas, <em>lovely little details.</em>
+            </h2>
+          </div>
+          <p>
+            Our projects are different pieces of the same bigger picture: making
+            it easier to imagine, build and use great software.
+          </p>
         </div>
         <div class="project-grid">
-          {projects.map((project) => (
-            <article class:list={['project-card', `project-card--${project.hue}`]}>
-              <div class="project-card__art" aria-hidden="true">
-                <div class="project-card__shape"></div><div class="project-card__shape project-card__shape--small"></div>
-                <span class="project-card__symbol">{project.symbol}</span>
-              </div>
-              <div class="project-card__body">
-                <p class="project-card__label">{project.number} / {project.eyebrow}</p>
-                <h3>{project.name}</h3>
-                <p>{project.description}</p>
-                <small>{project.details}</small>
-                <div class="project-card__links">
-                  <a href={withBase(project.href)}>Meet {project.name} <span aria-hidden="true">↗</span></a>
-                  <a href={project.docs} target="_blank" rel="noopener noreferrer">Documentation <span aria-hidden="true">↗</span><span class="sr-only"> (opens in new tab)</span></a>
+          {
+            projects.map((project) => (
+              <article
+                class:list={['project-card', `project-card--${project.hue}`]}
+              >
+                <div class="project-card__art" aria-hidden="true">
+                  <>
+                    <div class="project-card__shape" />
+                    <div class="project-card__shape project-card__shape--small" />
+                  </>
+                  <span class="project-card__symbol">{project.symbol}</span>
                 </div>
-              </div>
-            </article>
-          ))}
+                <div class="project-card__body">
+                  <p class="project-card__label">
+                    {project.number} / {project.eyebrow}
+                  </p>
+                  <h3>{project.name}</h3>
+                  <p>{project.description}</p>
+                  <small>{project.details}</small>
+                  <div class="project-card__links">
+                    <a href={withBase(project.href)}>
+                      Meet {project.name} <span aria-hidden="true">↗</span>
+                    </a>
+                    <a
+                      href={project.docs}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Documentation{' '}
+                      <>
+                        <span aria-hidden="true">↗</span>
+                        <span class="sr-only"> (opens in new tab)</span>
+                      </>
+                    </a>
+                  </div>
+                </div>
+              </article>
+            ))
+          }
         </div>
-        <div class="projects-more"><a href={withBase('/work/')}>Explore all projects <span aria-hidden="true">→</span></a></div>
+        <div class="projects-more">
+          <a href={withBase('/work/')}
+            >Explore all projects <span aria-hidden="true">→</span></a>
+        </div>
       </Container>
     </section>
 
     <section class="story-section" aria-labelledby="story-title">
       <Container size="xl">
         <div class="story-panel">
-          <div class="story-panel__doodle" aria-hidden="true"><span>✳</span><span>◌</span><span>✦</span></div>
+          <div class="story-panel__doodle" aria-hidden="true">
+            <span>✳</span><span>◌</span><span>✦</span>
+          </div>
           <div class="story-panel__content">
             <p class="eyebrow">A little about us</p>
-            <h2 id="story-title">Good software starts with <em>“what if?”</em></h2>
-            <p>Aurora Softwares is a home for curious experiments and long-term ideas. We care about the details, enjoy learning as we build, and believe the journey should be just as interesting as the end result.</p>
-            <Button href={withBase('/about/')} variant="outline" size="lg">Our story <span aria-hidden="true">↗</span></Button>
+            <h2 id="story-title">
+              Good software starts with <em>“what if?”</em>
+            </h2>
+            <p>
+              Aurora Softwares is a home for curious experiments and long-term
+              ideas. We care about the details, enjoy learning as we build, and
+              believe the journey should be just as interesting as the end
+              result.
+            </p>
+            <Button href={withBase('/about/')} variant="outline" size="lg"
+              >Our story <span aria-hidden="true">↗</span></Button
+            >
           </div>
         </div>
       </Container>
@@ -132,81 +200,583 @@ const projects = [
 
     <section class="explore-section" aria-labelledby="explore-title">
       <Container size="xl">
-        <p class="eyebrow">Find your starting point</p><h2 id="explore-title">Come on in. <em>Have a look around.</em></h2>
+        <p class="eyebrow">Find your starting point</p><h2 id="explore-title">
+          Come on in. <em>Have a look around.</em>
+        </h2>
         <div class="explore-grid">
-          <a href="https://hylang.co.uk/" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">⌘</span><strong>Learn Hydrogen</strong><small>Language guides, examples and documentation ↗</small></a>
-          <a href="https://aurora-softwares.github.io/Australis-Docs/" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">◈</span><strong>Discover Australis</strong><small>Take a closer look at the operating system ↗</small></a>
-          <a href="https://aurora-softwares.github.io/Quark-Docs/" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">✧</span><strong>Get to know Quark</strong><small>Explore the IDE and its documentation ↗</small></a>
+          <a
+            href="https://hylang.co.uk/"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><span aria-hidden="true">⌘</span><strong>Learn Hydrogen</strong
+            ><small>Language guides, examples and documentation ↗</small></a
+          >
+          <a
+            href="https://aurora-softwares.github.io/Australis-Docs/"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><span aria-hidden="true">◈</span><strong>Discover Australis</strong
+            ><small>Take a closer look at the operating system ↗</small></a
+          >
+          <a
+            href="https://aurora-softwares.github.io/Quark-Docs/"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><span aria-hidden="true">✧</span><strong>Get to know Quark</strong
+            ><small>Explore the IDE and its documentation ↗</small></a
+          >
         </div>
       </Container>
     </section>
-    <section class="closing" aria-label="Aurora Softwares on GitHub"><Container size="xl"><p>Thanks for stopping by ♡</p><h2>There’s always <em>something new</em> taking shape.</h2><Button href="https://github.com/Aurora-softwares" external variant="solid" size="lg">Find us on GitHub <span aria-hidden="true">↗</span></Button></Container></section>
+    <section class="closing" aria-label="Aurora Softwares on GitHub">
+      <Container size="xl"
+        ><p>Thanks for stopping by ♡</p><h2>
+          There’s always <em>something new</em> taking shape.
+        </h2><Button
+          href="https://github.com/Aurora-softwares"
+          external
+          variant="solid"
+          size="lg">Find us on GitHub <span aria-hidden="true">↗</span></Button
+        ></Container>
+    </section>
   </main>
   <Footer />
 </BaseLayout>
 
 <style>
-  main { overflow: clip; }
-  .eyebrow { display:flex; align-items:center; gap:.6rem; margin:0 0 1.5rem; color:var(--color-accent-text); font:700 .8rem/1.4 var(--font-mono); letter-spacing:.12em; text-transform:uppercase; }
-  .eyebrow__sparkle { font-size:1.3rem; }
-  .welcome { position:relative; padding:clamp(5rem,9vw,9rem) 0 clamp(6rem,10vw,10rem); }
-  .welcome__grid { display:grid; grid-template-columns: minmax(0,1.12fr) minmax(0,.88fr); gap:clamp(1rem,4vw,5rem); align-items:center; }
-  .welcome__copy { position:relative; z-index:1; }
-  .welcome h1 { max-width:12ch; margin:0 0 2rem; font-size:clamp(3.5rem,7.8vw,7.8rem); line-height:.98; letter-spacing:-.077em; }
-  .welcome h1 span { background:linear-gradient(110deg,#ab81e8,#7da9f2 54%,#e8a3bf); background-clip:text; -webkit-background-clip:text; color:transparent; }
-  .welcome__intro { max-width:36rem; color:var(--color-text-muted); font-size:clamp(1.1rem,1.6vw,1.4rem); line-height:1.75; }
-  .actions { display:flex; gap:1rem; flex-wrap:wrap; margin-top:2rem; }
-  .welcome__note { margin:2rem 0 0; color:var(--color-text-muted); font-size:.85rem; }
-  .art { position:relative; min-height:37rem; isolation:isolate; }
-  .art__glow { position:absolute; inset:10% 3%; border-radius:50%; background:radial-gradient(circle,#f4d9fc 0,#c9e7fe 42%,transparent 70%); opacity:.6; filter:blur(32px); }
-  .art__blob { position:absolute; border-radius:50% 50% 38% 62% / 53% 30% 70% 47%; filter:drop-shadow(0 2rem 2rem #596c9c20); }
-  .art__blob--lilac { inset:11% 25% 26% 13%; background:linear-gradient(150deg,#cdb4f8,#a5aaf4); transform:rotate(-18deg); }
-  .art__blob--blue { inset:27% 6% 12% 40%; background:linear-gradient(130deg,#b3e6fa,#b4c5fc); transform:rotate(30deg); }
-  .art__blob--peach { width:37%; aspect-ratio:1; left:8%; bottom:5%; background:linear-gradient(140deg,#f7d7c2,#f4b4c6); transform:rotate(-22deg); }
-  .art__ring { position:absolute; width:74%; aspect-ratio:1; top:12%; left:16%; border:2px solid #ffffffa8; border-radius:50%; transform:rotate(25deg) skew(15deg); }
-  .art__star { position:absolute; color:#9470d6; font-size:4rem; text-shadow:0 0 22px #fff9; }
-  .art__star--one { top:2%; right:8%; }.art__star--two { bottom:5%; right:16%; color:#ef9eaa; }
-  .art__card { position:absolute; display:flex; align-items:center; gap:.8rem; border:1px solid #ffffffc4; border-radius:1.2rem; background:#ffffffb8; backdrop-filter:blur(16px); box-shadow:0 1rem 3rem #555f9624; color:#434462; font-size:.84rem; padding:1rem 1.2rem; }
-  .art__card--one { top:26%; left:0; transform:rotate(-8deg); }.art__card--one strong { color:#8f63d4; }
-  .art__dot { height:.7rem; width:.7rem; border-radius:50%; background:#ad87e9; }
-  .art__card--two { right:0; bottom:27%; transform:rotate(7deg); }.art__code { display:grid; place-items:center; width:2.8rem; aspect-ratio:1; border-radius:.8rem; background:#d7d0ff; font-weight:800; }
-  .art__label { position:absolute; bottom:2%; left:28%; color:var(--color-text-muted); font:700 .69rem var(--font-mono); letter-spacing:.15em; }
-  .hello-strip { border-block:1px solid var(--glass-border); background:color-mix(in srgb,var(--color-surface) 55%,transparent); }
-  .hello-strip :global(.container) { display:flex; justify-content:space-around; align-items:center; gap:1rem; padding-block:1.6rem; color:var(--color-text-muted); font-size:.85rem; font-weight:700; text-align:center; }
-  .hello-strip span:nth-child(even) { color:#b38bdc; font-size:1.5rem; }
-  .projects-section,.explore-section { padding:clamp(6rem,10vw,10rem) 0; }
-  .section-intro { display:flex; align-items:end; justify-content:space-between; gap:3rem; margin-bottom:3rem; }
-  .section-intro h2,.story-panel h2,.explore-section h2,.closing h2 { max-width:14ch; margin:0; font-size:clamp(2.8rem,5.4vw,5.5rem); letter-spacing:-.065em; line-height:1.07; }
-  .section-intro h2 em,.story-panel h2 em,.explore-section h2 em,.closing h2 em { color:var(--color-accent-text); font-family:Georgia,serif; font-weight:400; }
-  .section-intro>p { max-width:24rem; color:var(--color-text-muted); font-size:1.1rem; line-height:1.7; }
-  .project-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1.25rem; }
-  .project-card { display:flex; flex-direction:column; overflow:hidden; border:1px solid var(--glass-border); border-radius:1.75rem; background:color-mix(in srgb,var(--color-surface) 90%,transparent); box-shadow:0 10px 35px #4c4d8010; transition:transform .25s ease,box-shadow .25s ease; }
-  .project-card:hover { transform:translateY(-6px); box-shadow:0 20px 45px #4c4d8021; }
-  .project-card__art { position:relative; min-height:15rem; overflow:hidden; display:grid; place-items:center; background:#e8dcfa; }
-  .project-card--sky .project-card__art { background:#d9ebfc; }.project-card--peach .project-card__art { background:#fbe2dc; }
-  .project-card__shape { position:absolute; width:12rem; aspect-ratio:1; background:#bba5f4; border-radius:40% 60% 55% 45% / 45% 38% 62% 55%; transform:rotate(30deg); }
-  .project-card--sky .project-card__shape { background:#9bc6f1; }.project-card--peach .project-card__shape { background:#efb9c4; }
-  .project-card__shape--small { width:8rem; transform:translate(6rem,-4rem) rotate(20deg); opacity:.5; }
-  .project-card__symbol { position:relative; z-index:1; font-size:clamp(3.5rem,7vw,6rem); font-weight:800; color:#5c4b83; text-shadow:0 8px 25px #ffffff87; }
-  .project-card__body { display:flex; flex-direction:column; flex:1; padding:1.8rem; }
-  .project-card__label { margin:0 0 1rem; color:var(--color-accent-text); font:.74rem var(--font-mono); text-transform:uppercase; letter-spacing:.08em; }
-  .project-card h3 { margin:0 0 1rem; font-size:2.3rem; letter-spacing:-.05em; }
-  .project-card__body>p:not(.project-card__label) { color:var(--color-text-muted); line-height:1.7; margin:0 0 1rem; }
-  .project-card small { display:block; margin-top:auto; padding-top:1rem; font-style:italic; color:var(--color-text-muted); }
-  .project-card__links { display:flex; flex-wrap:wrap; gap:.7rem 1.3rem; margin-top:1.6rem; border-top:1px solid var(--glass-border); padding-top:1.3rem; }
-  .project-card__links a,.projects-more a { color:var(--color-accent-text); font-size:.9rem; font-weight:700; text-decoration:none; }
-  .project-card__links a:hover,.projects-more a:hover { text-decoration:underline; text-underline-offset:4px; }
-  .projects-more { text-align:center; margin-top:2.5rem; }
-  .story-section { padding:1rem 0 5rem; }.story-panel { position:relative; display:grid; grid-template-columns:.8fr 1.2fr; align-items:center; min-height:28rem; padding:clamp(2rem,6vw,6rem); border-radius:2rem; border:1px solid var(--glass-border); background:linear-gradient(130deg,#e9dffacb,#d7e8fdab 55%,#f9e5e5c4); overflow:hidden; }
-  [data-theme='dark'] .story-panel { background:linear-gradient(130deg,#42345d,#283f58 55%,#5c394c); }
-  .story-panel__doodle { position:relative; min-height:19rem; }.story-panel__doodle span { position:absolute; color:#9170cf; font-size:9rem; }.story-panel__doodle span:nth-child(2){top:0;left:35%;color:#73a4c9;font-size:17rem;}.story-panel__doodle span:nth-child(3){bottom:0;left:5%;color:#e795b0;font-size:6rem;}
-  .story-panel__content { position:relative; z-index:1; }.story-panel h2 { max-width:15ch; }.story-panel__content>p:not(.eyebrow) { max-width:35rem; color:var(--color-text-muted); line-height:1.8; font-size:1.05rem; margin:1.5rem 0 2rem; }
-  .explore-section { text-align:center; }.explore-section>.container>.eyebrow { justify-content:center; }.explore-section h2 { max-width:none; }
-  .explore-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; margin-top:3rem; text-align:left; }
-  .explore-grid a { display:flex; flex-direction:column; gap:.8rem; padding:2rem; color:var(--color-text); border:1px solid var(--glass-border); border-radius:1.4rem; background:var(--color-surface); text-decoration:none; transition:transform .2s ease; }
-  .explore-grid a:hover { transform:translateY(-4px); }.explore-grid a>span { color:var(--color-accent-text); font-size:2.6rem; }.explore-grid strong { font-size:1.35rem; }.explore-grid small { color:var(--color-text-muted); font-size:.95rem; line-height:1.55; }
-  .closing { padding:5rem 0 8rem; text-align:center; }.closing p { color:var(--color-accent-text); font-weight:700; }.closing h2 { margin:1.5rem auto 2rem; max-width:15ch; }
-  @media (max-width:1024px) { .welcome__grid { grid-template-columns:1fr; }.art { max-width:36rem; width:100%; margin:auto; min-height:30rem; }.section-intro { align-items:start; flex-direction:column; gap:.5rem; }.project-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }.project-card:last-child { grid-column:1/-1; }.project-card:last-child .project-card__art { min-height:12rem; }.story-panel { grid-template-columns:.5fr 1fr; } }
-  @media (max-width:640px) { .welcome { padding-top:4.5rem; }.welcome h1 { font-size:clamp(3rem,12vw,4.5rem); }.art { min-height:23rem; }.art__card { font-size:.67rem; padding:.7rem; }.hello-strip :global(.container) { flex-wrap:wrap; }.hello-strip span:nth-child(even) { display:none; }.project-grid,.explore-grid { grid-template-columns:1fr; }.project-card:last-child { grid-column:auto; }.story-panel { grid-template-columns:1fr; }.story-panel__doodle { min-height:9rem; }.story-panel__doodle span { font-size:6rem; }.story-panel__doodle span:nth-child(2) { font-size:10rem; }.story-panel__doodle span:nth-child(3) { font-size:3rem; } }
-  @media (prefers-reduced-motion:reduce) { .project-card,.explore-grid a { transition:none; }.project-card:hover,.explore-grid a:hover { transform:none; } }
+  main {
+    overflow: clip;
+  }
+  .eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin: 0 0 1.5rem;
+    color: var(--color-accent-text);
+    font: 700 0.8rem/1.4 var(--font-mono);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  .eyebrow__sparkle {
+    font-size: 1.3rem;
+  }
+  .welcome {
+    position: relative;
+    padding: clamp(5rem, 9vw, 9rem) 0 clamp(6rem, 10vw, 10rem);
+  }
+  .welcome__grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.12fr) minmax(0, 0.88fr);
+    gap: clamp(1rem, 4vw, 5rem);
+    align-items: center;
+  }
+  .welcome__copy {
+    position: relative;
+    z-index: 1;
+  }
+  .welcome h1 {
+    max-width: 12ch;
+    margin: 0 0 2rem;
+    font-size: clamp(3.5rem, 7.8vw, 7.8rem);
+    line-height: 0.98;
+    letter-spacing: -0.077em;
+  }
+  .welcome h1 span {
+    background: linear-gradient(110deg, #ab81e8, #7da9f2 54%, #e8a3bf);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  .welcome__intro {
+    max-width: 36rem;
+    color: var(--color-text-muted);
+    font-size: clamp(1.1rem, 1.6vw, 1.4rem);
+    line-height: 1.75;
+  }
+  .actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+  }
+  .welcome__note {
+    margin: 2rem 0 0;
+    color: var(--color-text-muted);
+    font-size: 0.85rem;
+  }
+  .art {
+    position: relative;
+    min-height: 37rem;
+    isolation: isolate;
+  }
+  .art__glow {
+    position: absolute;
+    inset: 10% 3%;
+    border-radius: 50%;
+    background: radial-gradient(
+      circle,
+      #f4d9fc 0,
+      #c9e7fe 42%,
+      transparent 70%
+    );
+    opacity: 0.6;
+    filter: blur(32px);
+  }
+  .art__blob {
+    position: absolute;
+    border-radius: 50% 50% 38% 62% / 53% 30% 70% 47%;
+    filter: drop-shadow(0 2rem 2rem #596c9c20);
+  }
+  .art__blob--lilac {
+    inset: 11% 25% 26% 13%;
+    background: linear-gradient(150deg, #cdb4f8, #a5aaf4);
+    transform: rotate(-18deg);
+  }
+  .art__blob--blue {
+    inset: 27% 6% 12% 40%;
+    background: linear-gradient(130deg, #b3e6fa, #b4c5fc);
+    transform: rotate(30deg);
+  }
+  .art__blob--peach {
+    width: 37%;
+    aspect-ratio: 1;
+    left: 8%;
+    bottom: 5%;
+    background: linear-gradient(140deg, #f7d7c2, #f4b4c6);
+    transform: rotate(-22deg);
+  }
+  .art__ring {
+    position: absolute;
+    width: 74%;
+    aspect-ratio: 1;
+    top: 12%;
+    left: 16%;
+    border: 2px solid #ffffffa8;
+    border-radius: 50%;
+    transform: rotate(25deg) skew(15deg);
+  }
+  .art__star {
+    position: absolute;
+    color: #9470d6;
+    font-size: 4rem;
+    text-shadow: 0 0 22px #fff9;
+  }
+  .art__star--one {
+    top: 2%;
+    right: 8%;
+  }
+  .art__star--two {
+    bottom: 5%;
+    right: 16%;
+    color: #ef9eaa;
+  }
+  .art__card {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    border: 1px solid #ffffffc4;
+    border-radius: 1.2rem;
+    background: #ffffffb8;
+    backdrop-filter: blur(16px);
+    box-shadow: 0 1rem 3rem #555f9624;
+    color: #434462;
+    font-size: 0.84rem;
+    padding: 1rem 1.2rem;
+  }
+  .art__card--one {
+    top: 26%;
+    left: 0;
+    transform: rotate(-8deg);
+  }
+  .art__card--one strong {
+    color: #8f63d4;
+  }
+  .art__dot {
+    height: 0.7rem;
+    width: 0.7rem;
+    border-radius: 50%;
+    background: #ad87e9;
+  }
+  .art__card--two {
+    right: 0;
+    bottom: 27%;
+    transform: rotate(7deg);
+  }
+  .art__code {
+    display: grid;
+    place-items: center;
+    width: 2.8rem;
+    aspect-ratio: 1;
+    border-radius: 0.8rem;
+    background: #d7d0ff;
+    font-weight: 800;
+  }
+  .art__label {
+    position: absolute;
+    bottom: 2%;
+    left: 28%;
+    color: var(--color-text-muted);
+    font: 700 0.69rem var(--font-mono);
+    letter-spacing: 0.15em;
+  }
+  .hello-strip {
+    border-block: 1px solid var(--glass-border);
+    background: color-mix(in srgb, var(--color-surface) 55%, transparent);
+  }
+  .hello-strip :global(.container) {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+    padding-block: 1.6rem;
+    color: var(--color-text-muted);
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-align: center;
+  }
+  .hello-strip span:nth-child(even) {
+    color: #b38bdc;
+    font-size: 1.5rem;
+  }
+  .projects-section,
+  .explore-section {
+    padding: clamp(6rem, 10vw, 10rem) 0;
+  }
+  .section-intro {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 3rem;
+    margin-bottom: 3rem;
+  }
+  .section-intro h2,
+  .story-panel h2,
+  .explore-section h2,
+  .closing h2 {
+    max-width: 14ch;
+    margin: 0;
+    font-size: clamp(2.8rem, 5.4vw, 5.5rem);
+    letter-spacing: -0.065em;
+    line-height: 1.07;
+  }
+  .section-intro h2 em,
+  .story-panel h2 em,
+  .explore-section h2 em,
+  .closing h2 em {
+    color: var(--color-accent-text);
+    font-family: Georgia, serif;
+    font-weight: 400;
+  }
+  .section-intro > p {
+    max-width: 24rem;
+    color: var(--color-text-muted);
+    font-size: 1.1rem;
+    line-height: 1.7;
+  }
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+  .project-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid var(--glass-border);
+    border-radius: 1.75rem;
+    background: color-mix(in srgb, var(--color-surface) 90%, transparent);
+    box-shadow: 0 10px 35px #4c4d8010;
+    transition:
+      transform 0.25s ease,
+      box-shadow 0.25s ease;
+  }
+  .project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 45px #4c4d8021;
+  }
+  .project-card__art {
+    position: relative;
+    min-height: 15rem;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    background: #e8dcfa;
+  }
+  .project-card--sky .project-card__art {
+    background: #d9ebfc;
+  }
+  .project-card--peach .project-card__art {
+    background: #fbe2dc;
+  }
+  .project-card__shape {
+    position: absolute;
+    width: 12rem;
+    aspect-ratio: 1;
+    background: #bba5f4;
+    border-radius: 40% 60% 55% 45% / 45% 38% 62% 55%;
+    transform: rotate(30deg);
+  }
+  .project-card--sky .project-card__shape {
+    background: #9bc6f1;
+  }
+  .project-card--peach .project-card__shape {
+    background: #efb9c4;
+  }
+  .project-card__shape--small {
+    width: 8rem;
+    transform: translate(6rem, -4rem) rotate(20deg);
+    opacity: 0.5;
+  }
+  .project-card__symbol {
+    position: relative;
+    z-index: 1;
+    font-size: clamp(3.5rem, 7vw, 6rem);
+    font-weight: 800;
+    color: #5c4b83;
+    text-shadow: 0 8px 25px #ffffff87;
+  }
+  .project-card__body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 1.8rem;
+  }
+  .project-card__label {
+    margin: 0 0 1rem;
+    color: var(--color-accent-text);
+    font: 0.74rem var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  .project-card h3 {
+    margin: 0 0 1rem;
+    font-size: 2.3rem;
+    letter-spacing: -0.05em;
+  }
+  .project-card__body > p:not(.project-card__label) {
+    color: var(--color-text-muted);
+    line-height: 1.7;
+    margin: 0 0 1rem;
+  }
+  .project-card small {
+    display: block;
+    margin-top: auto;
+    padding-top: 1rem;
+    font-style: italic;
+    color: var(--color-text-muted);
+  }
+  .project-card__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem 1.3rem;
+    margin-top: 1.6rem;
+    border-top: 1px solid var(--glass-border);
+    padding-top: 1.3rem;
+  }
+  .project-card__links a,
+  .projects-more a {
+    color: var(--color-accent-text);
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-decoration: none;
+  }
+  .project-card__links a:hover,
+  .projects-more a:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+  .projects-more {
+    text-align: center;
+    margin-top: 2.5rem;
+  }
+  .story-section {
+    padding: 1rem 0 5rem;
+  }
+  .story-panel {
+    position: relative;
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    align-items: center;
+    min-height: 28rem;
+    padding: clamp(2rem, 6vw, 6rem);
+    border-radius: 2rem;
+    border: 1px solid var(--glass-border);
+    background: linear-gradient(130deg, #e9dffacb, #d7e8fdab 55%, #f9e5e5c4);
+    overflow: hidden;
+  }
+  [data-theme='dark'] .story-panel {
+    background: linear-gradient(130deg, #42345d, #283f58 55%, #5c394c);
+  }
+  .story-panel__doodle {
+    position: relative;
+    min-height: 19rem;
+  }
+  .story-panel__doodle span {
+    position: absolute;
+    color: #9170cf;
+    font-size: 9rem;
+  }
+  .story-panel__doodle span:nth-child(2) {
+    top: 0;
+    left: 35%;
+    color: #73a4c9;
+    font-size: 17rem;
+  }
+  .story-panel__doodle span:nth-child(3) {
+    bottom: 0;
+    left: 5%;
+    color: #e795b0;
+    font-size: 6rem;
+  }
+  .story-panel__content {
+    position: relative;
+    z-index: 1;
+  }
+  .story-panel h2 {
+    max-width: 15ch;
+  }
+  .story-panel__content > p:not(.eyebrow) {
+    max-width: 35rem;
+    color: var(--color-text-muted);
+    line-height: 1.8;
+    font-size: 1.05rem;
+    margin: 1.5rem 0 2rem;
+  }
+  .explore-section {
+    text-align: center;
+  }
+  .explore-section > .container > .eyebrow {
+    justify-content: center;
+  }
+  .explore-section h2 {
+    max-width: none;
+  }
+  .explore-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 3rem;
+    text-align: left;
+  }
+  .explore-grid a {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 2rem;
+    color: var(--color-text);
+    border: 1px solid var(--glass-border);
+    border-radius: 1.4rem;
+    background: var(--color-surface);
+    text-decoration: none;
+    transition: transform 0.2s ease;
+  }
+  .explore-grid a:hover {
+    transform: translateY(-4px);
+  }
+  .explore-grid a > span {
+    color: var(--color-accent-text);
+    font-size: 2.6rem;
+  }
+  .explore-grid strong {
+    font-size: 1.35rem;
+  }
+  .explore-grid small {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+    line-height: 1.55;
+  }
+  .closing {
+    padding: 5rem 0 8rem;
+    text-align: center;
+  }
+  .closing p {
+    color: var(--color-accent-text);
+    font-weight: 700;
+  }
+  .closing h2 {
+    margin: 1.5rem auto 2rem;
+    max-width: 15ch;
+  }
+  @media (max-width: 1024px) {
+    .welcome__grid {
+      grid-template-columns: 1fr;
+    }
+    .art {
+      max-width: 36rem;
+      width: 100%;
+      margin: auto;
+      min-height: 30rem;
+    }
+    .section-intro {
+      align-items: start;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .project-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .project-card:last-child {
+      grid-column: 1/-1;
+    }
+    .project-card:last-child .project-card__art {
+      min-height: 12rem;
+    }
+    .story-panel {
+      grid-template-columns: 0.5fr 1fr;
+    }
+  }
+  @media (max-width: 640px) {
+    .welcome {
+      padding-top: 4.5rem;
+    }
+    .welcome h1 {
+      font-size: clamp(3rem, 12vw, 4.5rem);
+    }
+    .art {
+      min-height: 23rem;
+    }
+    .art__card {
+      font-size: 0.67rem;
+      padding: 0.7rem;
+    }
+    .hello-strip :global(.container) {
+      flex-wrap: wrap;
+    }
+    .hello-strip span:nth-child(even) {
+      display: none;
+    }
+    .project-grid,
+    .explore-grid {
+      grid-template-columns: 1fr;
+    }
+    .project-card:last-child {
+      grid-column: auto;
+    }
+    .story-panel {
+      grid-template-columns: 1fr;
+    }
+    .story-panel__doodle {
+      min-height: 9rem;
+    }
+    .story-panel__doodle span {
+      font-size: 6rem;
+    }
+    .story-panel__doodle span:nth-child(2) {
+      font-size: 10rem;
+    }
+    .story-panel__doodle span:nth-child(3) {
+      font-size: 3rem;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .project-card,
+    .explore-grid a {
+      transition: none;
+    }
+    .project-card:hover,
+    .explore-grid a:hover {
+      transform: none;
+    }
+  }
 </style>
