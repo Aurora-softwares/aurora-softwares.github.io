@@ -1,50 +1,35 @@
 ---
-title: 'Northstar Civic Platform'
-summary: 'A calm, accessible service hub that helps residents find local support without learning how government is organized.'
-description: 'Northstar turns a fragmented catalogue of city services into a task-focused experience designed for stressful, time-sensitive moments.'
-cover: '../../assets/images/projects/northstar-cover.webp'
-coverAlt: 'Northstar service finder shown across desktop and mobile screens'
-images:
-  - '../../assets/images/projects/northstar-search.webp'
-  - '../../assets/images/projects/northstar-mobile.webp'
-  - '../../assets/images/projects/northstar-directory.webp'
+title: 'Australis OS'
+summary: 'An operating system with a fresh perspective.'
+description: 'Australis OS is an experimental operating system being developed from the ground up, with its own kernel, drivers and desktop ambitions.'
+cover: '../../assets/images/projects/australis-art.svg'
+coverAlt: 'Pastel blue abstract artwork with a starburst for Australis OS'
 tech:
-  - 'Astro'
-  - 'TypeScript'
-  - 'Contentful'
-  - 'Playwright'
-role: 'Product design & frontend'
+  - 'Operating system'
+  - 'Kernel'
+  - 'Graphics'
+role: 'Operating system'
 year: 2026
-featured: true
+featured: false
 links:
-  live: 'https://example.com'
-client: 'Northstar Council'
-duration: '16 weeks'
+  live: 'https://aurora-softwares.github.io/Australis-Docs/'
+  github: 'https://github.com/Aurora-softwares/Australis-OS'
 ---
 
-## The constraint
+## Meet Australis OS
 
-```js
-let age = 5;
-```
+What would it take to build an operating system from scratch? Australis OS is Aurora Softwares’ exploration of that question.
 
-Residents arrived with a need, but the old site answered with departments. Finding rental support, a permit, or a missed collection meant translating a life event into the council’s internal language.
+Rather than customising an existing desktop operating system, this project works on the underlying pieces: booting, the kernel, storage, drivers, graphics and user applications.
 
-We reorganized more than 240 services around **plain-language tasks**. Search and navigation share one taxonomy, so the experience stays predictable whether a visitor types, browses, or follows a link from a letter.
+## A project with room to grow
 
-> The useful interface was not the one with the most answers. It was the one that made the next step unmistakable.
+Australis is a work in progress, not a finished replacement for your everyday operating system. The focus is on building a strong foundation while exploring what a friendly, modern desktop might eventually look like.
 
-## A system for urgent moments
+- **Start at the foundations:** learn about the kernel, drivers and file systems.
+- **Follow the interface work:** explore the graphics and desktop experience.
+- **See the progress:** find code and development milestones in the project repository.
 
-The visual system lowers cognitive load with stable page anatomy, clear status language, and generous touch targets. High-priority services expose eligibility and response times before asking for personal information.
+## Explore the project
 
-### What changed
-
-- Task completion is possible without knowing a department name.
-- Every form preserves progress and explains why information is requested.
-- Content editors preview service states before publishing.
-- Automated journeys cover keyboard, screen-reader, and narrow-screen use.
-
-## Outcome
-
-In moderated testing, residents found the correct service faster and with fewer backtracks. The shared content model also gave internal teams one source of truth for service hours, eligibility, and disruptions.
+Read the [Australis OS documentation](https://aurora-softwares.github.io/Australis-Docs/) or visit [Australis OS on GitHub](https://github.com/Aurora-softwares/Australis-OS).
