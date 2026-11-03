@@ -31,7 +31,9 @@ const {
 // Plain string paths (public/ or remote) are rendered as-is.
 const isLocalAsset = typeof src !== 'string';
 const isSvg = isLocalAsset && (src as ImageMetadata).format === 'svg';
-const staticSrc = isLocalAsset && !isSvg ? (src as ImageMetadata).src : withBase(src as string);
+const staticSrc = isLocalAsset
+  ? (src as ImageMetadata).src
+  : withBase(src as string);
 const staticWidth = width ?? (isSvg ? (src as ImageMetadata).width : undefined);
 const staticHeight = height ?? (isSvg ? (src as ImageMetadata).height : undefined);
 
@@ -42,7 +44,7 @@ const resolvedWidths = widths ?? (sizes ? [400, 800, 1200] : undefined);
 ---
 
 {
-  isLocalAsset ? (
+  isLocalAsset && !isSvg ? (
     <AstroPicture
       src={src as ImageMetadata}
       alt={alt}
