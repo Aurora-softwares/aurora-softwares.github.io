@@ -87,7 +87,7 @@ const siteConfig: SiteConfig = {
 
   theme: {
     accentColor: 'hsl(280, 70%, 60%)',
-    defaultColorMode: 'system',
+    defaultColorMode: 'light',
     showThemeToggle: true,
   },
 
@@ -95,6 +95,7 @@ const siteConfig: SiteConfig = {
     main: [
       { name: 'Home', href: '/' },
       { name: 'Projects', href: '/work/' },
+      { name: 'Documentation', href: '/docs/' },
       { name: 'About', href: '/about/' },
     ],
   },
@@ -105,7 +106,7 @@ const siteConfig: SiteConfig = {
     landing: false,
     rss: false,
     sitemap: true,
-    search: true,
+    search: false,
   },
 
   social: {
