@@ -25,4 +25,4 @@ The [Australis OS source repository](https://github.com/Aurora-softwares/Austral
 
 [Hydrogen](/docs/projects/hydrogen/) is Aurora's programming language and one of the technologies being developed alongside Australis. They are separate projects with a shared long-term goal.
 
-You can also [read the Australis project introduction](/work/australisOS/) on the company website.
+You can also [read the Australis project introduction](/work/australisos/) on the company website.
