@@ -3,7 +3,7 @@ title: 'Australis OS'
 summary: 'An operating system with a fresh perspective.'
 description: 'Australis OS is an experimental operating system being developed from the ground up, with its own kernel, drivers and desktop ambitions.'
 cover: '../../assets/images/projects/australis-art.svg'
-coverAlt: 'Pastel blue abstract artwork with a starburst for Australis OS'
+coverAlt: 'Warm pastel orange artwork with a starburst for Australis OS'
 tech:
   - 'Operating system'
   - 'Kernel'
