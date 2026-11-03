@@ -1,7 +1,7 @@
 {
   "name": "aurora-softwares.github.io",
   "version": "1.3.0",
-  "description": "A glassmorphism multi-purpose theme for Astro 7 - Blog, Portfolio & Landing Pages",
+  "description": "Aurora Softwares — Hydrogen, Quark IDE and Australis OS",
   "type": "module",
   "scripts": {
     "dev": "astro dev",
@@ -17,7 +17,6 @@
   },
   "dependencies": {
     "@astrojs/markdown-satteri": "0.4.6",
-    "@astrojs/starlight": "^0.42.5",
     "@astrojs/mdx": "^8.0.1",
     "@astrojs/rss": "^4.0.19",
     "@astrojs/sitemap": "^3.7.4",
@@ -45,31 +44,23 @@
     "typescript-eslint": "^8.72.1"
   },
   "keywords": [
+    "aurora-softwares",
+    "hydrogen",
+    "quark-ide",
+    "australis-os",
     "astro",
-    "astro-theme",
-    "withastro",
-    "glassmorphism",
-    "glass-ui",
-    "blog",
     "portfolio",
-    "landing-page",
-    "multipurpose",
-    "dark-mode",
-    "mdx",
-    "seo",
-    "rss",
-    "typescript",
-    "accessible"
+    "open-source"
   ],
-  "author": "kpab <kpablow1122@gmail.com>",
+  "author": "Aurora Softwares",
   "license": "MIT",
-  "homepage": "https://kpab.github.io/astro-haze/",
+  "homepage": "https://aurora-softwares.github.io/",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kpab/astro-haze.git"
+    "url": "git+https://github.com/Aurora-softwares/aurora-softwares.github.io.git"
   },
   "bugs": {
-    "url": "https://github.com/kpab/astro-haze/issues"
+    "url": "https://github.com/Aurora-softwares/aurora-softwares.github.io/issues"
   },
   "allowScripts": {
     "esbuild": true
