@@ -75,15 +75,15 @@ export interface SiteConfig {
 }
 
 const siteConfig: SiteConfig = {
-  name: 'Astro Haze',
-  title: 'Astro Haze - Glassmorphism Theme',
-  description: 'A beautiful glassmorphism multi-purpose theme for Astro 7',
-  author: 'Your Name',
-  url: 'https://kpab.github.io/astro-haze',
+  name: 'Aurora Softwares',
+  title: 'Aurora Softwares — Thoughtful software for curious minds',
+  description: 'Meet Aurora Softwares, the home of Hydrogen, Australis OS and Quark IDE. Explore the projects, documentation and open-source development.',
+  author: 'Aurora Softwares',
+  url: 'https://aurora-softwares.github.io',
   ogImage: '/og-image.png',
-  twitterHandle: '@yourusername',
-  lang: 'en',
-  ogLocale: 'en_US',
+  twitterHandle: '',
+  lang: 'en-GB',
+  ogLocale: 'en_GB',
 
   theme: {
     accentColor: 'hsl(280, 70%, 60%)',
@@ -94,26 +94,22 @@ const siteConfig: SiteConfig = {
   nav: {
     main: [
       { name: 'Home', href: '/' },
-      { name: 'Blog', href: '/blog/' },
-      { name: 'Portfolio', href: '/work/' },
-      { name: 'Landing', href: '/landing/' },
+      { name: 'Projects', href: '/work/' },
       { name: 'About', href: '/about/' },
     ],
   },
 
   features: {
-    blog: true,
+    blog: false,
     portfolio: true,
-    landing: true,
-    rss: true,
+    landing: false,
+    rss: false,
     sitemap: true,
     search: true,
   },
 
   social: {
-    github: 'https://github.com/yourusername',
-    twitter: 'https://twitter.com/yourusername',
-    linkedin: 'https://linkedin.com/in/yourusername',
+    github: 'https://github.com/Aurora-softwares',
   },
 
   blog: {
