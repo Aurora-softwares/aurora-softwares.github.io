@@ -27,7 +27,7 @@ const { Content } = await render(project);
 const description = project.data.description ?? project.data.summary;
 const projectLinks = [
   project.data.links?.live && {
-    label: 'Visit live site',
+    label: 'Read documentation',
     href: project.data.links.live,
     external: true,
   },
